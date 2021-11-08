@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Qi Xu"
-  avatar           : "profile.png"
-  bio              : ""
+  avatar           : "Qi_profile_image.jpg"
+  bio              : "Ph.D. student at UC Irvine"
   location         : "Irvine, CA, USA"
   employer         :
   pubmed           : 
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : 
+  github           : "statsqixu" 
   google_plus      :
   keybase          :
   instagram        :
