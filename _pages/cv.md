@@ -18,10 +18,10 @@ Education
 
 Research Interests
 ======
-* Latent Factor Modeling
-* Deep Learning
-* Crowdsourcing
-* Personalized Medicine
+* Methodology:
+  * Latent Factor Modeling, Deep Learning
+* Application:
+  * Crowdsourcing, Personalized Medicine
 
 
 Papers
