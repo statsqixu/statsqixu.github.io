@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+Last updated: Nov, 2021
+
 Education
 ======
 * Ph.D in Statistics, University of California, Irvine, 2024 (expected)
