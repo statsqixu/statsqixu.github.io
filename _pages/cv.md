@@ -11,49 +11,48 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Statistics, University of California, Irvine, 2024 (expected)
+* M.S. in Statistics, University of Illinois at Urbana Champaign, 2019
+* B.S. in Statistics, Tongji University, 2018
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
+Research Interests
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Latent Factor Modeling
+* Deep Learning
+* Crowdsourcing
+* Personalized Medicine
 
-Publications
+
+Papers
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, under review.
+  2. **Q.Xu**, H.Fu, A.Qu. **Estimating Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Manuscript*.
+  3. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
+  4. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.** *In Preparation*. 
   
 Talks
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+* Contributed talks:
+  1. Joint Statistical Meeting, 2019, Virtual
+
+* Invited talks:
+  1. ICSA Applied Statistics Symposium, 2021, Virtual
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
-Service and leadership
+Referee Experience
 ======
-* Currently signed in to 43 different slack teams
+* Journal of the American Statistical Association (2)
+* Journal of the Royal Statistical Society: Series B (2)
+
+Consulting Experience
+======
+Statistical Consultant, Illinois Statistics Office, UIUC.
+* SAS programming
+* Statistical Data Analysis (ANOVA, regression analysis, etc)
+* Machine Learning (Advertisement revenue forcast, classification, etc)
+
+Professional Membership
+======
+* American Statistical Association
+* International Chinese Statistical Association
