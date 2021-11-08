@@ -46,6 +46,12 @@ Referee Experience
 * Journal of the American Statistical Association (2)
 * Journal of the Royal Statistical Society: Series B (2)
 
+Teaching Experience
+======
+* Teaching assistant
+  * Stat 295: Statistical Learning in Data Science, 2021 Spring
+  * Stat 120A: Introduction to Probability and Statistics I, 2021 Fall
+
 Consulting Experience
 ======
 Statistical Consultant, Illinois Statistics Office, UIUC.
