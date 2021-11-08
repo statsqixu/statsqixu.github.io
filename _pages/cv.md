@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-Last updated: Nov, 2021
 
 Education
 ======
@@ -58,3 +57,5 @@ Professional Membership
 ======
 * American Statistical Association
 * International Chinese Statistical Association
+
+Last updated: Nov, 2021
