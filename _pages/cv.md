@@ -27,7 +27,7 @@ Research Interests
 
 Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, under review.
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, under review. *2022 SLDS Student Paper Award*
   2. **Q.Xu**, H.Fu, A.Qu. **Estimating Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Manuscript*.
   3. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
   4. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.** *In Preparation*. 
@@ -44,7 +44,7 @@ Talks
 Referee Experience
 ======
 * Journal of the American Statistical Association (2)
-* Journal of the Royal Statistical Society: Series B (2)
+* Journal of the Royal Statistical Society: Series B (3)
 
 Teaching Experience
 ======
