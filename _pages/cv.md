@@ -20,7 +20,7 @@ Education
 Research Interests
 ======
 * Methodology:
-  * Latent Factor Modeling, Deep Learning
+  * Latent Factor Modeling
 * Application:
   * Crowdsourcing, Personalized Medicine
 
@@ -64,4 +64,4 @@ Professional Membership
 * American Statistical Association
 * International Chinese Statistical Association
 
-Last updated: Nov, 2021
+Last updated: Jan, 2022
