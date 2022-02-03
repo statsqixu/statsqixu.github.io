@@ -19,10 +19,9 @@ Education
 
 Research Interests
 ======
-* Methodology:
-  * Latent Factor Modeling
-* Application:
-  * Crowdsourcing, Personalized Medicine
+* Latent Variable Models
+* Personalized Medicine, Causal Inference
+* Data Privacy
 
 
 Papers
@@ -30,7 +29,7 @@ Papers
   1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, under revision. *2022 SLDS Student Paper Award*
   2. **Q.Xu**, H.Fu, A.Qu. **Estimating Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Manuscript*.
   3. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
-  4. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.** *In Preparation*. 
+  4. J.Zhang, **Q.Xu**, F.Xue, A.Qu. **Multi-resolution Time Series Prediction.** *In Preparation*. 
   
 Talks
 ======
