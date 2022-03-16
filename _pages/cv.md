@@ -24,13 +24,18 @@ Research Interests
 * Data Privacy
 
 
-Papers
+Papers Under Review
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, under revision. *2022 SLDS Student Paper Award*
-  2. **Q.Xu**, H.Fu, A.Qu. **Estimating Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Manuscript*.
-  3. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
-  4. J.Zhang, **Q.Xu**, F.Xue, A.Qu. **Multi-resolution Time Series Prediction.** *In Preparation*. 
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *under revision*. *(2022 SLDS Student Paper Award)*
+  2. **Q.Xu**, H.Fu, A.Qu. **Estimating Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Submitted*. 
   
+Works In Preparation
+======
+
+  1. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** 
+  2. J.Zhang, **Q.Xu**, F.Xue, A.Qu. **Multi-resolution Time Series Prediction.**
+  3. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.**
+
 Talks
 ======
 * Contributed talks:
@@ -63,4 +68,4 @@ Professional Membership
 * American Statistical Association
 * International Chinese Statistical Association
 
-Last updated: Jan, 2022
+Last updated: Mar, 2022
