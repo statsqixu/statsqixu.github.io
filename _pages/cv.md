@@ -33,7 +33,7 @@ Works In Preparation
 ======
 
   1. J.Rim, **Q.Xu**, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** 
-  2. J.Zhang, **Q.Xu**, F.Xue, A.Qu. **Multi-resolution Time Series Prediction.**
+  2. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.**
   3. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.**
 
 Talks
