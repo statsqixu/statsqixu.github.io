@@ -35,6 +35,7 @@ Works In Preparation
   1. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** 
   2. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.**
   3. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.**
+  4. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.**
 
 Talks
 ======
@@ -44,7 +45,6 @@ Talks
 * Invited talks:
   1. ICSA Applied Statistics Symposium, 2021, Virtual
   
-  
 Referee Experience
 ======
 * Journal of the American Statistical Association (2)
@@ -53,7 +53,7 @@ Referee Experience
 Teaching Experience
 ======
 * Teaching assistant
-  * Stat 295: Statistical Learning in Data Science, 2021 Spring
+  * Stat 295: Statistical Learning in Data Science, 2021, 2022 Spring
   * Stat 120A: Introduction to Probability and Statistics I, 2021 Fall
 
 Consulting Experience
@@ -68,4 +68,8 @@ Professional Membership
 * American Statistical Association
 * International Chinese Statistical Association
 
-Last updated: Mar, 2022
+Community Activities
+======
+* Brown Bag Seminar Series Committee, UCI.
+
+Last updated: Apr, 2022
