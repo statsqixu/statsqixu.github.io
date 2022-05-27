@@ -29,13 +29,13 @@ Papers Under Review
   1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *under revision*. *(2022 SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Submitted*. 
   
-Works In Preparation
+<!-- Works In Preparation
 ======
 
   1. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** 
   2. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.**
   3. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.**
-  4. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.**
+  4. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** -->
 
 Talks
 ======
