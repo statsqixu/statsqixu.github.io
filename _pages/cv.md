@@ -24,11 +24,13 @@ Research Interests
 * Data Privacy
 
 
-Papers Under Review
+Methodology Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *under revision*. *(2022 SLDS Student Paper Award)*
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Submitted*. *(2022 SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Submitted*. 
   
+<!-- Collaboration Papers
+====== -->
 <!-- Works In Preparation
 ======
 
