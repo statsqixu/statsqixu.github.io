@@ -26,9 +26,18 @@ Research Interests
 
 Methodology Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Submitted*. *(2022 SLDS Student Paper Award)*
-  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Submitted*. 
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Review*. *(2022 ASA SLDS Student Paper Award)*
+  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Under Revision*.
+  3. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
+  4. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Dynamic Latent Factor Model with Applications in Multi-resolution Data.** *In Preparation*.
+  5. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** *In Preparation*.
   
+
+Collaboration Papers
+======
+  1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.** *In Preparation*.
+  2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Predict High-risk Pregnancy: Objective Sleep Parameters.** *In Preparation*.
+
 <!-- Collaboration Papers
 ====== -->
 <!-- Works In Preparation
@@ -47,10 +56,12 @@ Talks
 * Invited talks:
   1. ICSA Applied Statistics Symposium, 2021, Virtual
   
-Referee Experience
+Professional Services
 ======
-* Journal of the American Statistical Association (2)
-* Journal of the Royal Statistical Society: Series B (4)
+* Reviewer: Journal of the American Statistical Association (2)
+* Reviewer: Journal of the Royal Statistical Society: Series B (4)
+* [2022 ICSDS](https://sites.google.com/view/icsds2022) website manager
+* Brown Bag Seminar Series Committee, UCI.
 
 Teaching Experience
 ======
@@ -70,8 +81,4 @@ Professional Membership
 * American Statistical Association
 * International Chinese Statistical Association
 
-Community Activities
-======
-* Brown Bag Seminar Series Committee, UCI.
-
-Last updated: Apr, 2022
+Last updated: Aug, 2022
