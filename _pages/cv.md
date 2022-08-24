@@ -44,7 +44,8 @@ Collaboration Papers
 Talks
 ======
 * Contributed talks:
-  1. Joint Statistical Meeting, 2019, Virtual
+  1. Joint Statistical Meeting, 2020, Virtual
+  2. Joint Statistical Meeting, 2022, Washington DC
 
 * Invited talks:
   1. ICSA Applied Statistics Symposium, 2021, Virtual
