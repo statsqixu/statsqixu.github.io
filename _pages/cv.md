@@ -27,10 +27,12 @@ Research Interests
 Methodology Papers
 ======
   1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Review*. *(2022 ASA SLDS Student Paper Award)*
-  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Omni-channel Treatment Rule Under Budget Constraints.** *Under Revision*.
-  3. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
-  4. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Dynamic Latent Factor Model with Applications in Multi-resolution Data.** *In Preparation*.
-  5. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** *In Preparation*.
+  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*.
+  3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
+  4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
+  5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Dynamic Latent Factor Model with Applications in Multi-resolution Data.** *In Preparation*.
+  6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** *In Preparation*.
+  
   
 
 Collaboration Papers
@@ -38,15 +40,6 @@ Collaboration Papers
   1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.** *In Preparation*.
   2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Predict High-risk Pregnancy: Objective Sleep Parameters.** *In Preparation*.
 
-<!-- Collaboration Papers
-====== -->
-<!-- Works In Preparation
-======
-
-  1. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** 
-  2. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Multi-resolution Time Series Prediction.**
-  3. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.**
-  4. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** -->
 
 Talks
 ======
