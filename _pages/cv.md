@@ -26,7 +26,7 @@ Research Interests
 
 Methodology Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Review*. *(2022 ASA SLDS Student Paper Award)*
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Revision*. *(2022 ASA SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*.
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
   4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
@@ -52,9 +52,9 @@ Talks
   
 Professional Services
 ======
-* Reviewer: Journal of the American Statistical Association (2)
-* Reviewer: Journal of the Royal Statistical Society: Series B (4)
-* [2022 ICSDS](https://sites.google.com/view/icsds2022) website manager
+* Reviewer: Journal of the American Statistical Association (4)
+* Reviewer: Journal of the Royal Statistical Society: Series B (7)
+* [2022 ICSDS](https://sites.google.com/view/icsds2022) Secretary and website manager
 * Brown Bag Seminar Series Committee, UCI.
 
 Teaching Experience
@@ -62,6 +62,7 @@ Teaching Experience
 * Teaching assistant
   * Stat 295: Statistical Learning in Data Science, 2021, 2022 Spring
   * Stat 120A: Introduction to Probability and Statistics I, 2021 Fall
+  * Data 296/297: Data Science Capstone Project, 2022 Fall
 
 Consulting Experience
 ======
@@ -74,5 +75,6 @@ Professional Membership
 ======
 * American Statistical Association
 * International Chinese Statistical Association
+* Eastern North American Region International Biometric Society
 
-Last updated: Aug, 2022
+Last updated: Oct, 2022
