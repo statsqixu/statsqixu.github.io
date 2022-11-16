@@ -12,7 +12,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Statistics, University of California, Irvine, 2024 (expected)
+* Ph.D in Statistics, University of California, Irvine, 2024 (Expected)
 * M.S. in Statistics, University of Illinois at Urbana Champaign, 2019
 * B.S. in Statistics, Tongji University, 2018
 
@@ -29,16 +29,16 @@ Methodology Papers
   1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Revision*. *(2022 ASA SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*.
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
-  4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Explore Time-varying Random Effects with Application in Personalized Medicine.** *In Preparation*.
-  5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Dynamic Latent Factor Model with Applications in Multi-resolution Data.** *In Preparation*.
-  6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release Using Latent Factor Model Transformer.** *Submitted*.
+  4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Personalized Model with Application in Personalized Medicine.** *In Preparation*.
+  5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** *In Preparation*.
+  6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Model.** *Submitted*.
   
   
 
 Collaboration Papers
 ======
-  1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differential Expressed Genes Testing for Count Data with High Dispersion.** *Submitted*.
-  2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Predict High-risk Pregnancy: Objective Sleep Parameters.** *In Preparation*.
+  1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.** *Submitted*.
+  2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Predict High-risk Pregnancy: Objective Sleep Parameters.** *Submitted*.
 
 
 Talks
@@ -52,8 +52,8 @@ Talks
   
 Professional Services
 ======
-* Reviewer: Journal of the American Statistical Association (4)
-* Reviewer: Journal of the Royal Statistical Society: Series B (7)
+* Journal Reviewer: Journal of the American Statistical Association (4), Journal of the Royal Statistical Society: Series B (7)
+* Conference Reviewer: AISTATS 2023 (4)
 * [2022 ICSDS](https://sites.google.com/view/icsds2022) Secretary and website manager
 * Brown Bag Seminar Series Committee, UCI.
 
@@ -77,4 +77,4 @@ Professional Membership
 * International Chinese Statistical Association
 * Eastern North American Region International Biometric Society
 
-Last updated: Oct, 2022
+Last updated: Nov, 2022
