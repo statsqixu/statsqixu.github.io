@@ -31,14 +31,14 @@ Methodology Papers
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
   4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Personalized Model with Application in Personalized Medicine.** *In Preparation*.
   5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** *In Preparation*.
-  6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Model.** *Submitted*.
+  6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** *Submitted*.
   
   
 
 Collaboration Papers
 ======
   1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.** *Submitted*.
-  2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Predict High-risk Pregnancy: Objective Sleep Parameters.** *Submitted*.
+  2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. **Longitudinal Objective Changes in Sleep Structure During Sleep.** *Submitted*.
 
 
 Talks
