@@ -12,7 +12,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Statistics, University of California, Irvine, 2024 (Expected)
+* Ph.D in Statistics, University of California, Irvine, 2020-Current
 * M.S. in Statistics, University of Illinois at Urbana Champaign, 2019
 * B.S. in Statistics, Tongji University, 2018
 
@@ -26,11 +26,11 @@ Research Interests
 
 Methodology Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Revision*. *(2022 ASA SLDS Student Paper Award)*
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Review*. *(2022 ASA SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*.
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
   4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Personalized Model with Application in Personalized Medicine.** *In Preparation*.
-  5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** *In Preparation*.
+  5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** *Submitted*.
   6. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** *Submitted*.
   
   
@@ -76,5 +76,7 @@ Professional Membership
 * American Statistical Association
 * International Chinese Statistical Association
 * Eastern North American Region International Biometric Society
+* International Biometric Society
+* Institute of Mathematical Statistics
 
-Last updated: Nov, 2022
+Last updated: Jan, 2022
