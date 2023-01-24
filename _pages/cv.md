@@ -23,11 +23,16 @@ Research Interests
 * Personalized Medicine, Causal Inference
 * Data Privacy
 
+Awards
+======
+* 2022 ASA SLDS Student Paper Award
+* 2023 ASA Nonparametric Statistics Student Paper Award
+
 
 Methodology Papers
 ======
   1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Under Review*. *(2022 ASA SLDS Student Paper Award)*
-  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*.
+  2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*. *(2023 ASA Nonparametric Statistics Student Paper Award)*
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
   4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Personalized Model with Application in Personalized Medicine.** *In Preparation*.
   5. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** *Submitted*.
