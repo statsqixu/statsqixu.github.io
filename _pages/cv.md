@@ -57,7 +57,7 @@ Talks
   
 Professional Services
 ======
-* Journal Reviewer: Journal of the American Statistical Association (4), Journal of the Royal Statistical Society: Series B (7)
+* Journal Reviewer: Journal of the American Statistical Association (4), Journal of the Royal Statistical Society: Series B (7), Stat (1)
 * Conference Reviewer: AISTATS 2023 (4)
 * [2022 ICSDS](https://sites.google.com/view/icsds2022) Secretary and website manager
 * Brown Bag Seminar Series Committee, UCI.
