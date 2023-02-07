@@ -31,7 +31,7 @@ Awards
 
 Methodology Papers
 ======
-  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, to appear. *(2022 ASA SLDS Student Paper Award)*
+  1. **Q.Xu**, Y.Yuan, J.Wang, A.Qu. [**Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.**](https://arxiv.org/abs/2302.02304) *Journal of the American Statistical Association*, to appear. *(2022 ASA SLDS Student Paper Award)*
   2. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Under Revision*. *(2023 ASA Nonparametric Statistics Student Paper Award)*
   3. X.Cao, G.Chen, H.Zeng, **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments: From a Classification Perspective.** *In Preparation*.
   4. J.Rim, **Q.Xu**, X.Tang, A.Qu. **Personalized Model with Application in Personalized Medicine.** *In Preparation*.
@@ -57,7 +57,7 @@ Talks
   
 Professional Services
 ======
-* Journal Reviewer: Journal of the American Statistical Association (4), Journal of the Royal Statistical Society: Series B (7), Stat (1)
+* Journal Reviewer: Journal of the American Statistical Association (5), Journal of the Royal Statistical Society: Series B (8), Stat (1)
 * Conference Reviewer: AISTATS 2023 (4)
 * [2022 ICSDS](https://sites.google.com/view/icsds2022) Secretary and website manager
 * Brown Bag Seminar Series Committee, UCI.
