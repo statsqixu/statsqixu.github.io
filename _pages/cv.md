@@ -21,7 +21,7 @@ Research Interests
 ======
 * Latent Variable Models
 * Personalized Medicine, Causal Inference
-* Data Privacy
+<!-- * Data Privacy -->
 
 Awards
 ======
