@@ -10,7 +10,7 @@ author_profile: true
 Research Interests
 ======
 - Latent Factor Models
-- Causal Inference
+- Decision Making
 - Differential Privacy
 - Crowdsourcing
 - Precision Medicine, Mobile Health
