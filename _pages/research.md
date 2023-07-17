@@ -33,4 +33,4 @@ Application
 
 2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. [**The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.**](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false) *Sleep, accepted*.
 
-3. Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. **Longitudinal Changes in Objective Sleep Parameters During Pregnancy.** *Women's Health, invited minor revision*.
+3. Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. **Longitudinal Changes in Objective Sleep Parameters During Pregnancy.** *Women's Health, accepted*.
