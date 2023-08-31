@@ -31,6 +31,6 @@ Application
 ======
 1. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. [**Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.**](https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract) *PLOS One, under review*.
 
-2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. [**The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.**](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false) *Sleep, accepted*.
+2. Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. [**The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.**](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false) *Sleep*, Volume 46, Issue Supplement_1, May 2023, Page A388.
 
-3. Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. **Longitudinal Changes in Objective Sleep Parameters During Pregnancy.** *Women's Health, accepted*.
+3. Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. [**Longitudinal Changes in Objective Sleep Parameters During Pregnancy.**](https://doi.org/10.1177/17455057231190952) *Women's Health*. 2023;19.
