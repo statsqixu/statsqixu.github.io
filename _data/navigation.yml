@@ -3,11 +3,14 @@ main:
   # - title: "Publications"
   #   url: /publications/        
     
-  - title: "Research"
+  - title: "Publication"
     url: /research/
 
-  - title: "Teaching"
+  - title: "Talk"
+    url: /talk/
+
+  - title: "Teaching and Mentoring"
     url: /teaching/
 
-  - title: "Services"
+  - title: "Professional Services and Honors"
     url: /service/
