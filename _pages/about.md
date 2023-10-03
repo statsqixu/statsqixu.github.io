@@ -12,5 +12,5 @@ I am a fifth-year Ph.D. candidate in the [Department of Statistics](https://www.
 
 My research focuses on *latent factor models*, *causal inference* and *differential privacy*, and their applications in *crowdsourcing*, *precision medicine* and *mobile health*. 
 
-** I am actively seeking postdoctoral positions starting from Fall 2024. **
+**I am actively seeking postdoctoral positions starting from Fall 2024.**
 
