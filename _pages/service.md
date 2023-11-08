@@ -13,7 +13,6 @@ Selected Awards
 - 2023 ASA Nonparametric Statistics Student Paper Award
 - 2022 ASA SLDS Student Paper Award
 
-
 Reviewer
 ======
 
@@ -21,6 +20,7 @@ Reviewer
 - Journal of the Royal Statistical Society: Series B
 - Stat
 - AISTATS
+- AAAI
 
 Services
 ======

@@ -10,7 +10,7 @@ author_profile: true
 Invited Talks
 ======
 
-- Individualized Treatment Rule for Combination Treatments, *IMS Young Mathematical Scientists Forum, Singapore*, Nov 2023.
+- Estimation of Individualized Combination Treatment Rule, *IMS Young Mathematical Scientists Forum, Singapore*, Nov 2023.
 
 - ``Trustworthy Machine Learning'' session Discusant, *Joint Statistical Meetings, Toronto*, Aug 2023.
 
