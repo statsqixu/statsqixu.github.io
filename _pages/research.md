@@ -24,7 +24,7 @@ Papers Under Review / Preprints
 
 6. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.** \[[BioRxiv](https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract)\]
 
-7. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.**
+7. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** \[Arxiv(https://arxiv.org/abs/2311.12392)\]
 
 8. Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** 
 
