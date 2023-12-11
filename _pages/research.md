@@ -20,7 +20,17 @@ Publications
 Papers Under Review / Preprints
 ======
 
+<<<<<<< HEAD
 - **Q.Xu**, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. **Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule.** \[[Arxiv](https://arxiv.org/abs/2310.00864)\] \[[Code](https://github.com/statsqixu/MLRWL)\]
+=======
+4. **Q.Xu**, H.Fu, A.Qu. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *(2023 ASA Nonparametric Statistics Student Paper Award)* \[[Arxiv](https://arxiv.org/abs/2303.11507)\] \[[Code](https://github.com/statsqixu/DEM)\]
+
+5. **Q.Xu**, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. **Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule.** \[[Arxiv](https://arxiv.org/abs/2310.00864)\] \[[Code](https://github.com/statsqixu/MLRWL)\]
+
+6. Y.Yuan, **Q.Xu**, W.Agaz, D.Janelle, C.Wang, W.Derek, U.Monica, A.Qu. **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.** \[[BioRxiv](https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract)\]
+
+7. J.Zhang, F.Xue, **Q.Xu**, A.Qu. **Individualized Dynamic Model for Multi-Resolutional Data.** \[[Arxiv](https://arxiv.org/abs/2311.12392)\]
+>>>>>>> c9c06702587ed4354d72e776dd3bb9277a6988d5
 
 - J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** \[[Arxiv](https://arxiv.org/abs/2311.12392)\]
 
