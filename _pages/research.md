@@ -22,7 +22,7 @@ Papers Under Review / Preprints
 
 - **Q.Xu**, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. **Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule.** \[[Arxiv](https://arxiv.org/abs/2310.00864)\] \[[Code](https://github.com/statsqixu/MLRWL)\]
 
-- J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. **Individualized Dynamic Latent Factor Model with Application in Mobile Health Data.** \[[Arxiv](https://arxiv.org/abs/2311.12392)\]
+- J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. **Individualized Dynamic Model for Multi-resolutional Data.** \[[Arxiv](https://arxiv.org/abs/2311.12392)\]
 
 - Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** 
 
