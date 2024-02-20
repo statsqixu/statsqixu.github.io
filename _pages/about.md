@@ -12,10 +12,8 @@ I am a fifth-year Ph.D. candidate in the [Department of Statistics](https://www.
 
 Research Interests
 ======
-- Causal Inference, Decision Making
-- Machine Learning, Latent Factor Modeling
-- Data Privacy, Differential Privacy
+- Causal Decision Making
+- Statistical Learning
+- Differential Privacy
 - Applications: Mobile Health, Precision Medicine, Crowdsourcing
-
-**I am actively seeking postdoctoral positions starting from Fall 2024.**
 

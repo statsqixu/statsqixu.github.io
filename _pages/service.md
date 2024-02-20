@@ -19,6 +19,7 @@ Reviewer
 - Journal of the American Statistical Association
 - Journal of the Royal Statistical Society: Series B
 - Stat
+- Journal of Nonparametric Statistics
 - AISTATS
 - AAAI
 

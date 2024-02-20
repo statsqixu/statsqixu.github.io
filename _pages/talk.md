@@ -10,6 +10,8 @@ author_profile: true
 Invited Talks
 ======
 
+- Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule, *ICSA Applied Statistics Symposium*, June 2024.
+
 - Estimation of Individualized Combination Treatment Rule, *IMS Young Mathematical Scientists Forum, Singapore*, Nov 2023.
 
 - ``Trustworthy Machine Learning'' session Discusant, *Joint Statistical Meetings, Toronto*, Aug 2023.
@@ -22,6 +24,8 @@ Invited Talks
 
 Contributed Talks
 ======
+
+- Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule, *ENAR Spring Meeting*, Mar 2024.
 
 - Optimal Individualized Treatment Rule for Combination Treatments, *Joint Statistical Meetings, Toronto*, Aug 2023.
 
