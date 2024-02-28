@@ -9,6 +9,7 @@ author_profile: true
 
 Selected Awards
 ======
+- 2024 UCI Statistics Fellowship for Methodology Research
 - 2023 IMS Hannan Graduate Student Travel Award
 - 2023 ASA Nonparametric Statistics Student Paper Award
 - 2022 ASA SLDS Student Paper Award
@@ -33,5 +34,6 @@ Services
 
 - Session Chairs:
 
-    - (Session Chair) Bernoulli-IMS One World Symposium, Virtual, 2020
+    - Bernoulli-IMS One World Symposium, Virtual, 2020
+    - ENAR Spring Meeting, Baltimore, 2024
     
