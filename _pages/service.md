@@ -9,7 +9,7 @@ author_profile: true
 
 Selected Awards
 ======
-- 2024 UCI Statistics Fellowship for Methodology Research
+- 2024 UCI Statistics Fellowship for Methodology Research \[[News] (https://ics.uci.edu/2024/03/04/qi-xu-receives-inaugural-statistics-fellowship-award-for-methodology-research/)\]
 - 2023 IMS Hannan Graduate Student Travel Award
 - 2023 ASA Nonparametric Statistics Student Paper Award
 - 2022 ASA SLDS Student Paper Award
