@@ -14,6 +14,5 @@ Research Interests
 ======
 - Causal Decision Making
 - Statistical Learning
-- Differential Privacy
-- Applications: Mobile Health, Precision Medicine, Crowdsourcing
+- Data Privacy
 
