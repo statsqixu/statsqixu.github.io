@@ -9,6 +9,7 @@ author_profile: true
 
 Selected Awards
 ======
+- 2024 NSF-Simons Fellowship Award
 - 2024 UCI Statistics Fellowship for Methodology Research \[[News](https://ics.uci.edu/2024/03/04/qi-xu-receives-inaugural-statistics-fellowship-award-for-methodology-research/)\]
 - 2023 IMS Hannan Graduate Student Travel Award
 - 2023 ASA Nonparametric Statistics Student Paper Award
@@ -17,12 +18,10 @@ Selected Awards
 Reviewer
 ======
 
-- Journal of the American Statistical Association
-- Journal of the Royal Statistical Society: Series B
-- Stat
-- Journal of Nonparametric Statistics
-- AISTATS
-- AAAI
+Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics
+
+Conferences: AISTATS, AAAI
+
 
 Services
 ======
