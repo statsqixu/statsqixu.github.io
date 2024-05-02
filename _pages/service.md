@@ -9,6 +9,7 @@ author_profile: true
 
 Selected Awards
 ======
+- 2024 UCI Department of Statistics Travel Award
 - 2024 NSF-Simons Fellowship Award
 - 2024 UCI Statistics Fellowship for Methodology Research \[[News](https://ics.uci.edu/2024/03/04/qi-xu-receives-inaugural-statistics-fellowship-award-for-methodology-research/)\]
 - 2023 IMS Hannan Graduate Student Travel Award

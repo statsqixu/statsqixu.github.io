@@ -13,6 +13,7 @@ I am a fifth-year Ph.D. candidate in the [Department of Statistics](https://www.
 Research Interests
 ======
 - Statistical Learning
-- Decision Making and Causal Inference
+- Decision Making, Causal Inference
 - Data Privacy
 
+Recent Update: May 2024
