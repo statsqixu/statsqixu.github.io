@@ -17,7 +17,7 @@ Publications
 
 - J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. (2024+) **Individualized Dynamic Model for Multi-resolutional Data.** *Biometrika*, accepted. *(J.Zhang won 2024 ENAR Distinguished Student Paper Awards and 2024 ASA Medical Devices and Diagnostics Student Paper Award, First place winner)* \[[Arxiv](https://arxiv.org/abs/2311.12392)\] \[[Journal](https://doi.org/10.1093/biomet/asae015)\]
 
-- Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** *Journal of Machine Learning Research*, accepted.
+- Y.Zhang, **Q.Xu**, N.Tang, A.Qu. **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** *Journal of Machine Learning Research* 25(116): 1-37, 2024. \[[Journal](https://jmlr.org/papers/v25/22-1324.html)\]
 
 - Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. (2023) **The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.** *Sleep*, Volume 46, Issue Supplement_1, May 2023, Page A388. \[[Abstract](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false)\]
 

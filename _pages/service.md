@@ -9,7 +9,6 @@ author_profile: true
 
 Selected Awards
 ======
-- 2024 UCI Department of Statistics Travel Award
 - 2024 NSF-Simons Fellowship Award
 - 2024 UCI Statistics Fellowship for Methodology Research \[[News](https://ics.uci.edu/2024/03/04/qi-xu-receives-inaugural-statistics-fellowship-award-for-methodology-research/)\]
 - 2023 IMS Hannan Graduate Student Travel Award
@@ -19,7 +18,7 @@ Selected Awards
 Reviewer
 ======
 
-Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics
+Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics; Journal of Machine Learning Research.
 
 Conferences: AISTATS, AAAI
 
