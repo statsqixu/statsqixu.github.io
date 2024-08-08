@@ -18,7 +18,7 @@ Selected Awards
 Reviewer
 ======
 
-Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics; Journal of Machine Learning Research.
+Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics; Journal of Machine Learning Research; Computational Statistics & Data Analysis.
 
 Conferences: AISTATS, AAAI
 
@@ -26,8 +26,6 @@ Conferences: AISTATS, AAAI
 Services
 ======
 - [2022 IMS ICSDS](https://sites.google.com/view/icsds2022) website manager and secretary.
-
-- [2023 IMS ICSDS](https://www.icsds2023.com) website manager.
 
 - Brown Bag Seminar Series Committee, UC Irvine, 2021-2022.
 
