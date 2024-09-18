@@ -7,29 +7,197 @@ author_profile: true
 
 {% include base_path %}
 
-Publications
-======
-- **Q.Xu**, Y.Yuan, J.Wang, A.Qu. (2024) **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.** *Journal of the American Statistical Association*, 119 (546), 1192-1204. *(2022 ASA SLDS Student Paper Award)* \[[Arxiv](https://arxiv.org/abs/2302.02304)\] \[[Journal](https://www.tandfonline.com/doi/abs/10.1080/01621459.2023.2178925)\] \[[Code](https://pypi.org/project/pylfgp/)\]
+<div id="publications-container">
+  <button id="show-all-btn" style="display: none;">Show All Publications</button>
+  
+  <h1>Publications</h1>
+  
+  <div class="publication">
+    <p>
+      <strong>Q.Xu</strong>, Y.Yuan, J.Wang, A.Qu. (2024) <strong>Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling.</strong> <em>Journal of the American Statistical Association</em>, 119 (546), 1192-1204. <em>(2022 ASA SLDS Student Paper Award)</em> [<a href="https://arxiv.org/abs/2302.02304">Arxiv</a>] [<a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.2023.2178925">Journal</a>] [<a href="https://pypi.org/project/pylfgp/">Code</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Crowdsourcing">Crowdsourcing</span>
+      <span class="tag" data-tag="Latent Factor Models">Latent Factor Models</span>
+    </p>
+  </div>
 
-- **Q.Xu**, H.Fu, A.Qu. (2023+) **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.** *Journal of the Royal Statistical Society: Series B*, to appear. *(2023 ASA Nonparametric Statistics Student Paper Award; 2023 IMS Hannan Graduate Student Travel Award)* \[[Arxiv](https://arxiv.org/abs/2303.11507)\] \[[Journal](https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkad141/7514594?redirectedFrom=fulltext)\] \[[Code](https://github.com/statsqixu/DEM)\] 
+  <div class="publication">
+    <p>
+      <strong>Q.Xu</strong>, H.Fu, A.Qu. (2023+) <strong>Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints.</strong> <em>Journal of the Royal Statistical Society: Series B</em>, 86(3), 714-741. <em>(2023 ASA Nonparametric Statistics Student Paper Award; 2023 IMS Hannan Graduate Student Travel Award)</em> [<a href="https://arxiv.org/abs/2303.11507">Arxiv</a>] [<a href="https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkad141/7514594?redirectedFrom=fulltext">Journal</a>] [<a href="https://github.com/statsqixu/DEM">Code</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Decision Making">Decision Making</span>
+      <span class="tag" data-tag="Causal Inference">Causal Inference</span>
+      <span class="tag" data-tag="Combination Treatments">Combination Treatments</span>
+      <span class="tag" data-tag="Latent Factor Models">Latent Factor Models</span>
+    </p>
+  </div>
 
-- **Q.Xu**, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. (2024) **Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule.** *Electronic Journal of Statistics* 18(1), 1517-1548. \[[Arxiv](https://arxiv.org/abs/2310.00864)\] \[[Journal](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-18/issue-1/Multi-label-residual-weighted-learning-for-individualized-combination-treatment-rule/10.1214/24-EJS2236.full)\] \[[Code](https://github.com/statsqixu/MLRWL)\]
+  <div class="publication">
+    <p>
+      <strong>Q.Xu</strong>, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. (2024) <strong>Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule.</strong> <em>Electronic Journal of Statistics</em> 18(1), 1517-1548. [<a href="https://arxiv.org/abs/2310.00864">Arxiv</a>] [<a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-18/issue-1/Multi-label-residual-weighted-learning-for-individualized-combination-treatment-rule/10.1214/24-EJS2236.full">Journal</a>] [<a href="https://github.com/statsqixu/MLRWL">Code</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Decision Making">Decision Making</span>
+      <span class="tag" data-tag="Causal Inference">Causal Inference</span>
+      <span class="tag" data-tag="Combination Treatments">Combination Treatments</span>
+    </p>
+  </div>
 
-- J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. (2024+) **Individualized Dynamic Model for Multi-resolutional Data with Application to Mobile Health.** *Biometrika*, to appear. *(J.Zhang won 2024 ENAR Distinguished Student Paper Awards and 2024 ASA Medical Devices and Diagnostics Student Paper Award, First place winner)* \[[Arxiv](https://arxiv.org/abs/2311.12392)\] \[[Journal](https://doi.org/10.1093/biomet/asae015)\]
+  <div class="publication">
+    <p>
+      J.Zhang, F.Xue, <strong>Q.Xu</strong>, J.Lee, A.Qu. (2024+) <strong>Individualized Dynamic Model for Multi-resolutional Data with Application to Mobile Health.</strong> <em>Biometrika</em>, to appear. <em>(J.Zhang won 2024 ENAR Distinguished Student Paper Awards and 2024 ASA Medical Devices and Diagnostics Student Paper Award, First place winner)</em> [<a href="https://arxiv.org/abs/2311.12392">Arxiv</a>] [<a href="https://doi.org/10.1093/biomet/asae015">Journal</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Latent Factor Models">Latent Factor Models</span>
+      <span class="tag" data-tag="Multi-resolutional Data">Multi-resolutional Data</span>
+      <span class="tag" data-tag="Mobile Health">Mobile Health</span>
+    </p>
+  </div>
 
-- Y.Zhang, **Q.Xu**, N.Tang, A.Qu. (2024) **Differential Private Data Release for Mixed-type Data via Latent Factor Models.** *Journal of Machine Learning Research* 25(116): 1-37, 2024. \[[Journal](https://jmlr.org/papers/v25/22-1324.html)\]
+  <div class="publication">
+    <p>
+      Y.Zhang, <strong>Q.Xu</strong>, N.Tang, A.Qu. (2024) <strong>Differential Private Data Release for Mixed-type Data via Latent Factor Models.</strong> <em>Journal of Machine Learning Research</em> 25(116): 1-37, 2024. [<a href="https://jmlr.org/papers/v25/22-1324.html">Journal</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Differential Privacy">Differential Privacy</span>
+      <span class="tag" data-tag="Latent Factor Models">Latent Factor Models</span>
+    </p>
+  </div>
 
-- Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. (2023) **The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.** *Sleep*, Volume 46, Issue Supplement_1, May 2023, Page A388. \[[Abstract](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false)\]
+  <div class="publication">
+    <p>
+      Y.Guo, <strong>Q.Xu</strong>, P.Kehoe, A.Qu. (2023) <strong>The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy.</strong> <em>Sleep</em>, Volume 46, Issue Supplement_1, May 2023, Page A388. [<a href="https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false">Abstract</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Sleep">Sleep</span>
+      <span class="tag" data-tag="Pregnancy">Pregnancy</span>
+      <span class="tag" data-tag="Mobile Health">Mobile Health</span>
+    </p>
+  </div>
 
-- Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. (2023) **Longitudinal Changes in Objective Sleep Parameters During Pregnancy.** *Women's Health*. 2023;19. \[[Journal](https://doi.org/10.1177/17455057231190952)\]
+  <div class="publication">
+    <p>
+      Y.Guo, <strong>Q.Xu</strong>, P.Kehoe, N.Dutt, A.Qu. (2023) <strong>Longitudinal Changes in Objective Sleep Parameters During Pregnancy.</strong> <em>Women's Health</em>. 2023;19. [<a href="https://doi.org/10.1177/17455057231190952">Journal</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Sleep">Sleep</span>
+      <span class="tag" data-tag="Pregnancy">Pregnancy</span>
+      <span class="tag" data-tag="Mobile Health">Mobile Health</span>
+    </p>
+  </div>
 
-- Y.Yuan, **Q.Xu**, A.Wani, J.Dahrenodorff, C.Wang, A.Shen, J.Donglasan, S.Burgan, Z.Graham, U.Monica, W.Derek, A.Qu. (2024) **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.** *PLOS ONE*, 19 (7), e0300565. \[[BioRxiv](https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract)\]
+  <div class="publication">
+    <p>
+      Y.Yuan, <strong>Q.Xu</strong>, A.Wani, J.Dahrenodorff, C.Wang, A.Shen, J.Donglasan, S.Burgan, Z.Graham, U.Monica, W.Derek, A.Qu. (2024) <strong>Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.</strong> <em>PLOS ONE</em>, 19 (7), e0300565. [<a href="https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract">BioRxiv</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Statistical Inference">Statistical Inference</span>
+      <span class="tag" data-tag="Genomics">Genomics</span>
+    </p>
+  </div>
 
-Papers Under Review / Preprints
-======
+  <h1>Papers Under Review / Preprints</h1>
 
-- K.Wei, F.Xue, **Q. Xu**, Y.Yuan, Y.Zhang, G.Qin, A.Wani, A.Aiello, D.Wildman, M.Uddin, A.Qu. (2024+) **Time-varying Mediation Analysis for Incomplete Data with Application to DNA Methylation Study for PTSD.**\[[BioRxiv](https://doi.org/10.1101/2024.02.06.579228)\]
+  <div class="publication">
+    <p>
+      K.Wei, F.Xue, <strong>Q. Xu</strong>, Y.Yuan, Y.Zhang, G.Qin, A.Wani, A.Aiello, D.Wildman, M.Uddin, A.Qu. (2024+) <strong>Time-varying Mediation Analysis for Incomplete Data with Application to DNA Methylation Study for PTSD.</strong> [<a href="https://doi.org/10.1101/2024.02.06.579228">BioRxiv</a>]
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Causal Inference">Causal Inference</span>
+      <span class="tag" data-tag="Genomics">Genomics</span>
+      <span class="tag" data-tag="PTSD">PTSD</span>
+    </p>
+  </div>
 
-- J.Rim, **Q.Xu**, X.Tang, Y.Guo, A.Qu. (2024+) **Individualized Time-varying Nonparametric Model with an Application in Mobile Health.**
+  <div class="publication">
+    <p>
+      J.Rim, <strong>Q.Xu</strong>, X.Tang, Y.Guo, A.Qu. (2024+) <strong>Individualized Time-varying Nonparametric Model with an Application in Mobile Health.</strong>
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Mobile Health">Mobile Health</span>
+    </p>
+  </div>
 
-- Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. (2024+) **Daily Changes in Sleep Stages and Associated Cardiovascular Parameters Over Pregnancy.** 
+  <div class="publication">
+    <p>
+      Y.Guo, <strong>Q.Xu</strong>, P.Kehoe, A.Qu. (2024+) <strong>Daily Changes in Sleep Stages and Associated Cardiovascular Parameters Over Pregnancy.</strong>
+    </p>
+    <p class="publication-tags">
+      Tags: 
+      <span class="tag" data-tag="Sleep">Sleep</span>
+      <span class="tag" data-tag="Pregnancy">Pregnancy</span>
+      <span class="tag" data-tag="Mobile Health">Mobile Health</span>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const publicationsContainer = document.getElementById('publications-container');
+  const showAllBtn = document.getElementById('show-all-btn');
+  const publications = document.querySelectorAll('.publication');
+  const tags = document.querySelectorAll('.tag');
+
+  tags.forEach(tag => {
+    tag.addEventListener('click', function() {
+      const selectedTag = this.getAttribute('data-tag');
+      filterPublications(selectedTag);
+      showAllBtn.style.display = 'block';
+    });
+  });
+
+  showAllBtn.addEventListener('click', function() {
+    publications.forEach(pub => pub.style.display = 'block');
+    this.style.display = 'none';
+  });
+
+  function filterPublications(tag) {
+    publications.forEach(pub => {
+      const pubTags = pub.querySelectorAll('.tag');
+      const hasTag = Array.from(pubTags).some(t => t.getAttribute('data-tag') === tag);
+      pub.style.display = hasTag ? 'block' : 'none';
+    });
+  }
+});
+</script>
+
+<style>
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: #e0e0e0;
+}
+
+#show-all-btn {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#show-all-btn:hover {
+  background-color: #45a049;
+}
+</style>
