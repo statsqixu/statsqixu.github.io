@@ -88,7 +88,7 @@ author_profile: true
 
   <div class="publication">
     <p>
-      Y.Yuan, <strong>Q.Xu</strong>, A.Wani, J.Dahrenodorff, C.Wang, A.Shen, J.Donglasan, S.Burgan, Z.Graham, U.Monica, W.Derek, A.Qu. (2024) <strong>Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.</strong> <em>PLOS ONE</em>, 19 (7), e0300565. [<a href="https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract">BioRxiv</a>]
+      Y.Yuan, <strong>Q.Xu</strong>, A.Wani, J.Dahrenodorff, C.Wang, A.Shen, J.Donglasan, S.Burgan, Z.Graham, U.Monica, W.Derek, A.Qu. (2024) <strong>Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data.</strong> <em>PLOS ONE</em>, 19 (7), e0300565. [<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0300565">Journal</a>] [<a href="https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract">BioRxiv</a>] [<a href="https://cran.r-project.org/web/packages/DEHOGT/index.html">R package</a>]
       <span class="publication-tags">
         <span class="tag" data-tag="Statistical Inference">Statistical Inference</span>
         <span class="tag" data-tag="Genomics">Genomics</span>

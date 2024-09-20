@@ -22,7 +22,6 @@ Journals: Journal of the American Statistical Association; Journal of the Royal 
 
 Conferences: AISTATS, AAAI
 
-
 Services
 ======
 - [2022 IMS ICSDS](https://sites.google.com/view/icsds2022) website manager and secretary.

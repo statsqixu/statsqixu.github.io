@@ -19,6 +19,6 @@ Research Interests
 - Statistical Learning
 - Decision Making, Causal Inference
 - Data Privacy
-- Statistical Genomics and Genetics
+- Statistical Genomics
 
 Recent Update: August 2024
