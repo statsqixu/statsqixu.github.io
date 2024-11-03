@@ -18,9 +18,9 @@ Selected Awards
 Reviewer
 ======
 
-Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics; Journal of Machine Learning Research; Computational Statistics & Data Analysis.
+Journals: Journal of the American Statistical Association; Journal of the Royal Statistical Society: Series B; Stat; Journal of Nonparametric Statistics; Journal of Machine Learning Research; Computational Statistics & Data Analysis; Statistica Sinica.
 
-Conferences: AISTATS, AAAI
+Conferences: AISTATS, AAAI, ICLR
 
 Services
 ======

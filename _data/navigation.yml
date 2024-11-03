@@ -6,11 +6,11 @@ main:
   - title: "Publication"
     url: /research/
 
-  - title: "Talk"
-    url: /talk/
+  # - title: "Talk"
+  #   url: /talk/
 
-  - title: "Teaching and Mentoring"
-    url: /teaching/
+  # - title: "Teaching and Mentoring"
+  #   url: /teaching/
 
-  - title: "Professional Services and Honors"
-    url: /service/
+  # - title: "Professional Services and Honors"
+  #   url: /service/
