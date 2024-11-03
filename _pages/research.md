@@ -7,57 +7,26 @@ author_profile: true
 
 ## Preprints
 
-3. **Time-varying Mediation Analysis for Incomplete Data with Application to DNA Methylation Study for PTSD**  
-   K.Wei, F.Xue, **Q. Xu**, Y.Yuan, Y.Zhang, G.Qin, A.Wani, A.Aiello, D.Wildman, M.Uddin, A.Qu. (2024+)  
-   [[BioRxiv]](https://doi.org/10.1101/2024.02.06.579228)
+3. Wei, K., Xue, F., **Xu, Q.**, Yuan, Y., Zhang, Y., Qin, G., Wani, A., Aiello, A., Wildman, D., Uddin, M., & Qu, A. (2024). Time-varying mediation analysis for incomplete data with application to DNA methylation study for PTSD. *bioRxiv*. [[Paper]](https://doi.org/10.1101/2024.02.06.579228)
 
-2. **Individualized Time-varying Nonparametric Model with an Application in Mobile Health**  
-   J.Rim, **Q.Xu**, X.Tang, Y.Guo, A.Qu. (2024+)
+2. Rim, J., **Xu, Q.**, Tang, X., Guo, Y., & Qu, A. (2024). Individualized time-varying nonparametric model with an application in mobile health. Under review.
 
-1. **Daily Changes in Sleep Stages and Associated Cardiovascular Parameters Over Pregnancy**  
-   Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. (2024+)
+1. Guo, Y., **Xu, Q.**, Kehoe, P., & Qu, A. (2024). Daily changes in sleep stages and associated cardiovascular parameters over pregnancy. Under review.
 
 ## Publications
 
-8. **Individualized Dynamic Model for Multi-resolutional Data with Application to Mobile Health**  
-   J.Zhang, F.Xue, **Q.Xu**, J.Lee, A.Qu. (2024+)  
-   *Biometrika*, to appear  
-   *(J.Zhang won 2024 ENAR Distinguished Student Paper Awards and 2024 ASA Medical Devices and Diagnostics Student Paper Award, First place winner)*  
-   [[Arxiv]](https://arxiv.org/abs/2311.12392) [[Journal]](https://doi.org/10.1093/biomet/asae015)
+8. Zhang, J., Xue, F., **Xu, Q.**, Lee, J., & Qu, A. (2024). Individualized dynamic model for multi-resolutional data with application to mobile health. *Biometrika*, to appear. [[Paper]](https://doi.org/10.1093/biomet/asae015)
 
-7. **Differential Private Data Release for Mixed-type Data via Latent Factor Models**  
-   Y.Zhang, **Q.Xu**, N.Tang, A.Qu. (2024)  
-   *Journal of Machine Learning Research* 25(116): 1-37, 2024  
-   [[Journal]](https://jmlr.org/papers/v25/22-1324.html)
+7. Zhang, Y., **Xu, Q.**, Tang, N., & Qu, A. (2024). Differential private data release for mixed-type data via latent factor models. *Journal of Machine Learning Research, 25*(116), 1-37. [[Paper]](https://jmlr.org/papers/v25/22-1324.html)
 
-6. **Differentially Expressed Heterogeneous Overdispersion Genes Testing for Count Data**  
-   Y.Yuan, **Q.Xu**, A.Wani, et al. (2024)  
-   *PLOS ONE*, 19 (7), e0300565  
-   [[Journal]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0300565) [[BioRxiv]](https://www.biorxiv.org/content/10.1101/2023.02.21.529455v1.abstract) [[R package]](https://cran.r-project.org/web/packages/DEHOGT/index.html)
+6. Yuan, Y., **Xu, Q.**, Wani, A., Luca, F., Grondin, M., Wang, Y., Wang, L., Uddin, M., & Qu, A. (2024). Differentially expressed heterogeneous overdispersion genes testing for count data. *PLOS ONE, 19*(7), e0300565. [[Paper]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0300565)
 
-5. **Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule**  
-   **Q.Xu**, X.Cao, G.Chen, H.Zeng, H.Fu, A.Qu. (2024)  
-   *Electronic Journal of Statistics* 18(1), 1517-1548  
-   [[Arxiv]](https://arxiv.org/abs/2310.00864) [[Journal]](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-18/issue-1/Multi-label-residual-weighted-learning-for-individualized-combination-treatment-rule/10.1214/24-EJS2236.full) [[Code]](https://github.com/statsqixu/MLRWL)
+5. **Xu, Q.**, Cao, X., Chen, G., Zeng, H., Fu, H., & Qu, A. (2024). Multi-label residual weighted learning for individualized combination treatment rule. *Electronic Journal of Statistics, 18*(1), 1517-1548. [[Paper]](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-18/issue-1/Multi-label-residual-weighted-learning-for-individualized-combination-treatment-rule/10.1214/24-EJS2236.full)
 
-4. **Optimal Individualized Treatment Rule for Combination Treatments Under Budget Constraints**  
-   **Q.Xu**, H.Fu, A.Qu. (2024)  
-   *Journal of the Royal Statistical Society: Series B*, 86(3), 714-741  
-   *(2023 ASA Nonparametric Statistics Student Paper Award; 2023 IMS Hannan Graduate Student Travel Award)*  
-   [[Arxiv]](https://arxiv.org/abs/2303.11507) [[Journal]](https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkad141/7514594) [[Code]](https://github.com/statsqixu/DEM)
+4. **Xu, Q.**, Fu, H., & Qu, A. (2024). Optimal individualized treatment rule for combination treatments under budget constraints. *Journal of the Royal Statistical Society: Series B, 86*(3), 714-741. [[Paper]](https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkad141/7514594)
 
-3. **Crowdsourcing Utilizing Subgroup Structure of Latent Factor Modeling**  
-   **Q.Xu**, Y.Yuan, J.Wang, A.Qu. (2024)  
-   *Journal of the American Statistical Association*, 119 (546), 1192-1204  
-   *(2022 ASA SLDS Student Paper Award)*  
-   [[Arxiv]](https://arxiv.org/abs/2302.02304) [[Journal]](https://www.tandfonline.com/doi/abs/10.1080/01621459.2023.2178925) [[Code]](https://pypi.org/project/pylfgp/)
+3. **Xu, Q.**, Yuan, Y., Wang, J., & Qu, A. (2024). Crowdsourcing utilizing subgroup structure of latent factor modeling. *Journal of the American Statistical Association, 119*(546), 1192-1204. [[Paper]](https://www.tandfonline.com/doi/abs/10.1080/01621459.2023.2178925)
 
-2. **The Longitudinal Relationship Between Objective Sleep and Cardiovascular Parameters During Pregnancy**  
-   Y.Guo, **Q.Xu**, P.Kehoe, A.Qu. (2023)  
-   *Sleep*, Volume 46, Issue Supplement_1, May 2023, Page A388  
-   [[Abstract]](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009?login=false)
+2. Guo, Y., **Xu, Q.**, Kehoe, P., & Qu, A. (2023). The longitudinal relationship between objective sleep and cardiovascular parameters during pregnancy. *Sleep, 46*(Supplement_1), A388. [[Paper]](https://academic.oup.com/sleep/article/46/Supplement_1/A388/7182009)
 
-1. **Longitudinal Changes in Objective Sleep Parameters During Pregnancy**  
-   Y.Guo, **Q.Xu**, P.Kehoe, N.Dutt, A.Qu. (2023)  
-   *Women's Health*. 2023;19  
-   [[Journal]](https://doi.org/10.1177/17455057231190952)
+1. Guo, Y., **Xu, Q.**, Kehoe, P., Dutt, N., & Qu, A. (2023). Longitudinal changes in objective sleep parameters during pregnancy. *Women's Health, 19*. [[Paper]](https://doi.org/10.1177/17455057231190952)
