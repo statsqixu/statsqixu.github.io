@@ -34,7 +34,7 @@ author_profile: true
     </p>
   </div>
 
-  <div class="publication" data-type="Publication">
+  <div class="publication" data-type="Preprint">
     <p>
       Y.Guo, <strong>Q.Xu</strong>, P.Kehoe, A.Qu. (2024+) <strong>Daily Changes in Sleep Stages and Associated Cardiovascular Parameters Over Pregnancy.</strong>
       <span class="publication-tags">
@@ -184,19 +184,34 @@ document.addEventListener('DOMContentLoaded', function() {
   display: inline-block;
   padding: 1px 6px;
   margin: 1px;
-  background-color: #f0f0f0;
   border-radius: 3px;
   cursor: pointer;
   font-size: 0.8em;
+  color: white;
+}
+
+/* Topic-specific tag colors */
+.tag[data-tag="Causal Inference"] { background-color: #FF6B6B; }
+.tag[data-tag="Genomics"] { background-color: #4ECDC4; }
+.tag[data-tag="PTSD"] { background-color: #45B7D1; }
+.tag[data-tag="Mobile Health"] { background-color: #96CEB4; }
+.tag[data-tag="Sleep"] { background-color: #9B59B6; }
+.tag[data-tag="Pregnancy"] { background-color: #FF8C94; }
+.tag[data-tag="Latent Factor Models"] { background-color: #5D4037; }
+.tag[data-tag="Multi-resolutional Data"] { background-color: #26A69A; }
+.tag[data-tag="Differential Privacy"] { background-color: #7986CB; }
+.tag[data-tag="Statistical Inference"] { background-color: #FB8C00; }
+.tag[data-tag="Decision Making"] { background-color: #43A047; }
+.tag[data-tag="Combination Treatments"] { background-color: #8D6E63; }
+.tag[data-tag="Crowdsourcing"] { background-color: #5C6BC0; }
+
+.tag:hover {
+  opacity: 0.9;
 }
 
 .publication-tags {
   font-size: 0.9em;
   margin-top: 5px;
-}
-
-.tag:hover {
-  background-color: #e0e0e0;
 }
 
 #show-all-btn {
@@ -215,11 +230,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .filter-buttons {
   margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
 }
 
-.filter-btn {
+.filter-btn, #show-all-btn {
   padding: 5px 10px;
-  margin-right: 10px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -227,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cursor: pointer;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, #show-all-btn:hover {
   background-color: #45a049;
 }
 </style>
