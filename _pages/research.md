@@ -11,8 +11,8 @@ author_profile: true
   <div class="filter-buttons">
     <button class="filter-btn" data-type="Publication">Publications</button>
     <button class="filter-btn" data-type="Preprint">Preprints</button>
+    <button id="show-all-btn" class="filter-btn" style="display: none;">Show All Papers</button>
   </div>
-  <button id="show-all-btn" style="display: none;">Show All Publications</button>
 
   <div class="publication" data-type="Preprint">
     <p>
