@@ -13,4 +13,4 @@ I am a postdoctoral researcher in the [Department of Statistics & Data Science](
 I obtained my Ph.D. degree from [Department of Statistics](https://www.stat.uci.edu) at University of California, Irvine in 2024, advised by Professor [Annie Qu](https://faculty.sites.uci.edu/qulab/). Before that, I got Master degree from [University of Illinois Urbana Champaign](https://stat.illinois.edu) in 2019, and Bachelor degree from Tongji University in 2018. 
 
 
-Recent Update: Nov 2024
+Recent Update: Jan 2025
