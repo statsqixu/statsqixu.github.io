@@ -81,24 +81,15 @@ author_profile: true
 }
 
 .paper-link {
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 4px 8px;
-  margin: 0 2px;
+  color: #007bff;
   text-decoration: none;
-  border-radius: 3px;
-  font-size: 0.85em;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .paper-link:hover {
-  background-color: #0056b3;
-  color: white;
-  text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #0056b3;
+  text-decoration: underline;
 }
 </style>
 
@@ -272,22 +263,36 @@ author_profile: true
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the view
+  showPublications('year');
+});
+
 function showPublications(viewType) {
+  console.log('Switching to view:', viewType); // Debug log
+  
   // Hide all sections
-  document.getElementById('year-view').classList.remove('active');
-  document.getElementById('topic-view').classList.remove('active');
+  const yearView = document.getElementById('year-view');
+  const topicView = document.getElementById('topic-view');
+  
+  if (yearView) yearView.classList.remove('active');
+  if (topicView) topicView.classList.remove('active');
   
   // Show selected section
-  document.getElementById(viewType + '-view').classList.add('active');
+  const selectedView = document.getElementById(viewType + '-view');
+  if (selectedView) {
+    selectedView.classList.add('active');
+    console.log('Activated view:', selectedView.id); // Debug log
+  }
   
   // Update button states
   const buttons = document.querySelectorAll('.toggle-btn');
   buttons.forEach(btn => btn.classList.remove('active'));
   
   if (viewType === 'year') {
-    buttons[0].classList.add('active');
+    if (buttons[0]) buttons[0].classList.add('active');
   } else {
-    buttons[1].classList.add('active');
+    if (buttons[1]) buttons[1].classList.add('active');
   }
 }
 </script>
