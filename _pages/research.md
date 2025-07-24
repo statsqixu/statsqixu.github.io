@@ -128,6 +128,7 @@ author_profile: true
   </div>
 </div>
 
+{% raw %}
 <script>
 window.onload = function() {
   var yearBtn = document.getElementById('toggle-year');
@@ -154,3 +155,4 @@ window.onload = function() {
   topicView.classList.remove('active');
 };
 </script>
+{% endraw %}
