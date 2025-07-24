@@ -130,35 +130,36 @@ author_profile: true
 
 {% raw %}
 <script>
-window.onload = function() {
+function activateToggle() {
   var yearBtn = document.getElementById('toggle-year');
   var topicBtn = document.getElementById('toggle-topic');
   var yearView = document.getElementById('year-view');
   var topicView = document.getElementById('topic-view');
+  if (!yearBtn || !topicBtn || !yearView || !topicView) return;
 
-  yearBtn.addEventListener('click', function() {
+  yearBtn.onclick = function() {
     yearView.classList.add('active');
     topicView.classList.remove('active');
     yearBtn.classList.add('active');
     topicBtn.classList.remove('active');
-  });
-
-  topicBtn.addEventListener('click', function() {
+  };
+  topicBtn.onclick = function() {
     topicView.classList.add('active');
     yearView.classList.remove('active');
     topicBtn.classList.add('active');
     yearBtn.classList.remove('active');
-  });
-
-  // Default view: show year
+  };
+  // Default view
   yearView.classList.add('active');
   topicView.classList.remove('active');
-};
-</script>
-{% endraw %}
+}
 
-{% raw %}
-<script>
-alert('JS is running!');
+// Try both DOMContentLoaded and window.onload for maximum compatibility
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', activateToggle);
+} else {
+  activateToggle();
+}
+window.onload = activateToggle;
 </script>
 {% endraw %}
