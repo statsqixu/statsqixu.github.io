@@ -12,5 +12,5 @@ main:
   # - title: "Teaching and Mentoring"
   #   url: /teaching/
 
-  # - title: "Professional Services and Honors"
-  #   url: /service/
+  - title: "Professional Activities"
+    url: /service/
