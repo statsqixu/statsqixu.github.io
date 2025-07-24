@@ -295,4 +295,5 @@ function showPublications(viewType) {
     if (buttons[1]) buttons[1].classList.add('active');
   }
 }
+window.showPublications = showPublications;
 </script>
