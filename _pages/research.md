@@ -156,3 +156,9 @@ window.onload = function() {
 };
 </script>
 {% endraw %}
+
+{% raw %}
+<script>
+alert('JS is running!');
+</script>
+{% endraw %}
