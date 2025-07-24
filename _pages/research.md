@@ -5,34 +5,6 @@ permalink: /research/
 author_profile: true
 ---
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const yearBtn = document.getElementById('toggle-year');
-  const topicBtn = document.getElementById('toggle-topic');
-  const yearView = document.getElementById('year-view');
-  const topicView = document.getElementById('topic-view');
-
-  function showYear() {
-    yearView.classList.add('active');
-    topicView.classList.remove('active');
-    yearBtn.classList.add('active');
-    topicBtn.classList.remove('active');
-  }
-
-  function showTopic() {
-    yearView.classList.remove('active');
-    topicView.classList.add('active');
-    yearBtn.classList.remove('active');
-    topicBtn.classList.add('active');
-  }
-
-  yearBtn.addEventListener('click', showYear);
-  topicBtn.addEventListener('click', showTopic);
-
-  // Default view
-  showYear();
-});
-</script>
 
 <style>
 .publication-toggle {
@@ -290,3 +262,30 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </div>
+
+<script>
+window.onload = function() {
+  const yearBtn = document.getElementById('toggle-year');
+  const topicBtn = document.getElementById('toggle-topic');
+  const yearView = document.getElementById('year-view');
+  const topicView = document.getElementById('topic-view');
+
+  yearBtn.addEventListener('click', function() {
+    yearView.classList.add('active');
+    topicView.classList.remove('active');
+    yearBtn.classList.add('active');
+    topicBtn.classList.remove('active');
+  });
+
+  topicBtn.addEventListener('click', function() {
+    topicView.classList.add('active');
+    yearView.classList.remove('active');
+    topicBtn.classList.add('active');
+    yearBtn.classList.remove('active');
+  });
+
+  // Default view: show year
+  yearView.classList.add('active');
+  topicView.classList.remove('active');
+};
+</script>
