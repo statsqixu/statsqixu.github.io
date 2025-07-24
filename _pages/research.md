@@ -30,8 +30,12 @@ author_profile: true
 .toggle-btn:hover {
   background: #e9ecef;
 }
-.publication-section { display: none; }
-.publication-section.active { display: block; }
+.publication-section { 
+  display: none !important; 
+}
+.publication-section.active { 
+  display: block !important; 
+}
 .year-group, .topic-group {
   margin-bottom: 2em;
 }
@@ -128,38 +132,50 @@ author_profile: true
   </div>
 </div>
 
-{% raw %}
 <script>
 function activateToggle() {
   var yearBtn = document.getElementById('toggle-year');
   var topicBtn = document.getElementById('toggle-topic');
   var yearView = document.getElementById('year-view');
   var topicView = document.getElementById('topic-view');
-  if (!yearBtn || !topicBtn || !yearView || !topicView) return;
+  
+  if (!yearBtn || !topicBtn || !yearView || !topicView) {
+    console.log('Elements not found:', {
+      yearBtn: !!yearBtn,
+      topicBtn: !!topicBtn, 
+      yearView: !!yearView,
+      topicView: !!topicView
+    });
+    return;
+  }
 
-  yearBtn.onclick = function() {
+  yearBtn.addEventListener('click', function() {
+    console.log('Year button clicked');
     yearView.classList.add('active');
     topicView.classList.remove('active');
     yearBtn.classList.add('active');
     topicBtn.classList.remove('active');
-  };
-  topicBtn.onclick = function() {
+  });
+  
+  topicBtn.addEventListener('click', function() {
+    console.log('Topic button clicked');
     topicView.classList.add('active');
-    yearView.classList.remove('active');
+    yearView.classList.remove('active');  
     topicBtn.classList.add('active');
     yearBtn.classList.remove('active');
-  };
-  // Default view
+  });
+  
+  // Set default view
   yearView.classList.add('active');
   topicView.classList.remove('active');
+  yearBtn.classList.add('active');
+  topicBtn.classList.remove('active');
 }
 
-// Try both DOMContentLoaded and window.onload for maximum compatibility
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', activateToggle);
-} else {
-  activateToggle();
-}
-window.onload = activateToggle;
+// Multiple ways to ensure the script runs
+document.addEventListener('DOMContentLoaded', activateToggle);
+window.addEventListener('load', activateToggle);
+
+// Also try with a small delay in case of timing issues
+setTimeout(activateToggle, 100);
 </script>
-{% endraw %}
