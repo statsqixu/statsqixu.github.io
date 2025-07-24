@@ -6,28 +6,31 @@ author_profile: true
 ---
 
 <script>
-function showPublications(viewType) {
-  // Hide all sections
+document.addEventListener('DOMContentLoaded', function() {
+  const yearBtn = document.getElementById('toggle-year');
+  const topicBtn = document.getElementById('toggle-topic');
   const yearView = document.getElementById('year-view');
   const topicView = document.getElementById('topic-view');
-  if (yearView) yearView.classList.remove('active');
-  if (topicView) topicView.classList.remove('active');
-  // Show selected section
-  const selectedView = document.getElementById(viewType + '-view');
-  if (selectedView) selectedView.classList.add('active');
-  // Update button states
-  const buttons = document.querySelectorAll('.toggle-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  if (viewType === 'year') {
-    if (buttons[0]) buttons[0].classList.add('active');
-  } else {
-    if (buttons[1]) buttons[1].classList.add('active');
-  }
-}
-window.showPublications = showPublications;
 
-document.addEventListener('DOMContentLoaded', function() {
-  showPublications('year');
+  function showYear() {
+    yearView.classList.add('active');
+    topicView.classList.remove('active');
+    yearBtn.classList.add('active');
+    topicBtn.classList.remove('active');
+  }
+
+  function showTopic() {
+    yearView.classList.remove('active');
+    topicView.classList.add('active');
+    yearBtn.classList.remove('active');
+    topicBtn.classList.add('active');
+  }
+
+  yearBtn.addEventListener('click', showYear);
+  topicBtn.addEventListener('click', showTopic);
+
+  // Default view
+  showYear();
 });
 </script>
 
@@ -120,8 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 <div class="publication-toggle">
-  <button class="toggle-btn active" onclick="showPublications('year')">View by Year</button>
-  <button class="toggle-btn" onclick="showPublications('topic')">View by Topic</button>
+  <button class="toggle-btn active" id="toggle-year">View by Year</button>
+  <button class="toggle-btn" id="toggle-topic">View by Topic</button>
 </div>
 
 <div id="year-view" class="publication-section active">
