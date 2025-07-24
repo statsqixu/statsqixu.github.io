@@ -5,6 +5,32 @@ permalink: /research/
 author_profile: true
 ---
 
+<script>
+function showPublications(viewType) {
+  // Hide all sections
+  const yearView = document.getElementById('year-view');
+  const topicView = document.getElementById('topic-view');
+  if (yearView) yearView.classList.remove('active');
+  if (topicView) topicView.classList.remove('active');
+  // Show selected section
+  const selectedView = document.getElementById(viewType + '-view');
+  if (selectedView) selectedView.classList.add('active');
+  // Update button states
+  const buttons = document.querySelectorAll('.toggle-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  if (viewType === 'year') {
+    if (buttons[0]) buttons[0].classList.add('active');
+  } else {
+    if (buttons[1]) buttons[1].classList.add('active');
+  }
+}
+window.showPublications = showPublications;
+
+document.addEventListener('DOMContentLoaded', function() {
+  showPublications('year');
+});
+</script>
+
 <style>
 .publication-toggle {
   text-align: center;
@@ -261,39 +287,3 @@ author_profile: true
     </div>
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize the view
-  showPublications('year');
-});
-
-function showPublications(viewType) {
-  console.log('Switching to view:', viewType); // Debug log
-  
-  // Hide all sections
-  const yearView = document.getElementById('year-view');
-  const topicView = document.getElementById('topic-view');
-  
-  if (yearView) yearView.classList.remove('active');
-  if (topicView) topicView.classList.remove('active');
-  
-  // Show selected section
-  const selectedView = document.getElementById(viewType + '-view');
-  if (selectedView) {
-    selectedView.classList.add('active');
-    console.log('Activated view:', selectedView.id); // Debug log
-  }
-  
-  // Update button states
-  const buttons = document.querySelectorAll('.toggle-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  
-  if (viewType === 'year') {
-    if (buttons[0]) buttons[0].classList.add('active');
-  } else {
-    if (buttons[1]) buttons[1].classList.add('active');
-  }
-}
-window.showPublications = showPublications;
-</script>
