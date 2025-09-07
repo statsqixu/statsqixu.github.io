@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Qi Xu's personal website # the website title (if blank, full name will be used instead)
+title: Qi Xu # the website title (if blank, full name will be used instead)
 first_name: Qi 
 middle_name: 
 last_name: Xu
@@ -198,7 +198,7 @@ exclude:
   - _pages/repositories.md
   - _pages/teaching.md
   - _pages/cv.md
-  - _pages/people.md
+  - _pages/profiles.md
   - _pages/dropdown.md
 keep_files:
   - CNAME
