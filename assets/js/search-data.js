@@ -378,7 +378,7 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-new-preprint-available-blockwise-missingness-meets-ai-arxiv-our-new-work-tackles-a-long-standing-challenge-in-statistics-semiparametric-inference-for-data-with-non-monotone-missing-patterns-for-over-30-years-the-theoretically-optimal-estimator-has-been-known-but-considered-computationally-intractable-for-practical-use-we-introduce-an-elegant-ray-approximation-to-the-optimal-estimating-equation-striking-a-crucial-balance-between-statistical-efficiency-and-computational-feasibility-this-approach-can-be-seamlessly-integrated-into-both-classical-semiparametric-and-modern-prediction-powered-inference-frameworks-offering-a-powerful-new-tool-for-researchers",
-          title: 'New Preprint Available: Blockwise Missingness meets AI [Arxiv] Our new work tackles a...',
+          title: 'New Preprint Available: Blockwise Missingness meets AI [Arxiv]. Our new work tackles a...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
