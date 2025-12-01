@@ -34,8 +34,6 @@ I am currently a postdoctoral researcher in the <a href="https://www.cmu.edu/die
 
 Previously, I obtained my PhD degree from <a href="https://www.stat.uci.edu">University of California, Irvine</a>, under supervision of <a href="https://qu.pstat.ucsb.edu">Annie Qu</a>. Prior to that, I got my Master and Bachelor degree from <a href="https://stat.illinois.edu">University of Illinois at Urbana Champaign</a> and <a href="https://math.tongji.edu.cn">Tongji University</a>.
 
-<!-- <strong style="color:red;">I will be on the 2025-2026 academic job market.</strong> -->
-
 **Recent research interests**
 - Direction 1: Integrating heterogeneous datasets for prediction, estimation and inference
 - Direction 2: Integrating AI (predictive, generative) models in the loop of statistical analysis
