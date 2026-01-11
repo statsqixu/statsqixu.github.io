@@ -18,14 +18,13 @@ nav_order: 1
 <h2>Preprints</h2>
 
 <ol>
-<li>B. Bateni, Y. Yuan, <strong>Q. Xu</strong>, A. Qu. Distributional Treatment Effect Estimation for Heterogeneous Populations via Optimal Transport. <em>Under review</em>.</li>
+<li>B. Bateni, Y. Yuan, <strong>Q. Xu</strong>, A. Qu. Distributional Treatment Effect Estimation for Heterogeneous Populations via Optimal Transport. <em>Manuscript</em>.</li>
 <li><strong>Q. Xu</strong>, L. Testa, J. Lei, K. Roeder. Blockwise Missing meets AI: A Tractable Solution for Semiparametric Inference. <em>Under review</em>.</li>
 <li><strong>Q. Xu</strong>, J. Lei, K. Roeder. Sparse Group Principal Component Analysis via Double Thresholding with Applications in Multi-Cellular Programs. <em>Manuscript</em>.</li>
-<li>L. Testa, <strong>Q. Xu</strong>, J. Lei, K. Roeder. Semiparametric Semi-supervised Learning for General Targets under Distribution Shift and Decaying Overlap. <em>Under review</em>.</li>
-<li>Y. Sui, <strong>Q. Xu</strong>, T. Li, Y. Bai, A. Qu. Partially-shared Imaging Regression on Integrating Heterogeneous BrainCognition Associations across Alzheimer's Diagnoses. <em>Under review</em>.</li>
-<li><strong>Q. Xu</strong>, A. Qu. Representation Retrieval Learning for Heterogeneous Data Integration. <em>Under review</em>. <u>An earlier version was presented in the IMS Medallion Lecture by Annie Qu</u>.</li>
+<li>L. Testa, <strong>Q. Xu</strong>, J. Lei, K. Roeder. Semiparametric Semi-supervised Learning for General Targets under Distribution Shift and Decaying Overlap. <em>Biometrika</em>, Reject & Resubmit.</li>
+<li>Y. Sui, <strong>Q. Xu</strong>, T. Li, Y. Bai, A. Qu. Partially-shared Imaging Regression on Integrating Heterogeneous BrainCognition Associations across Alzheimer's Diagnoses. <em>Journal of the American Statistical Association, Application & Case Study</em>, Reject & Resubmit.</li>
+<li><strong>Q. Xu</strong>, A. Qu. Representation Retrieval Learning for Heterogeneous Data Integration. <em>Journal of the American Statistical Association, Theory & Method</em>, Major revision. <u>An earlier version was presented in the IMS Medallion Lecture by Annie Qu</u>.</li>
 <li>Y. Sui, <strong>Q. Xu</strong>, Y. Bai, A. Qu. Multi-task Learning for Heterogeneous Data via Integrating Shared and Task-Specific Encoding. <em>Under review</em>.</li>
-<li>Y. Sui, <strong>Q. Xu</strong>, Y. Bai, A. Qu. Multi-task Learning for Heterogeneous Multi-source Block-Wise Missing Data. <em>Under review</em>.</li>
 </ol>
 
 <hr>
@@ -33,7 +32,8 @@ nav_order: 1
 <h2>Peer-reviewed Publications</h2>
 
 <ol>
-<li>K. Wei, F. Xue, <strong>Q. Xu</strong>, Y. Yuan, Y. Zhang, G. Qin, A. Wani, A. Aiello, D. Wildman, M. Uddin, A. Qu. (2025+) Time-varying Mediation Analysis for Incomplete Data with Application to DNA Methylation Study for PTSD. <em>Annals of Applied Statistics</em>, just accepted.</li>
+<li>Y. Sui, <strong>Q. Xu</strong>, Y. Bai, A. Qu. Multi-task Learning for Heterogeneous Multi-source Block-Wise Missing Data. <em>Journal of Computational and Graphical Statistics</em>, accepted.</li>
+<li>K. Wei, F. Xue, <strong>Q. Xu</strong>, Y. Yuan, Y. Zhang, G. Qin, A. Wani, A. Aiello, D. Wildman, M. Uddin, A. Qu. (2025+) Time-varying Mediation Analysis for Incomplete Data with Application to DNA Methylation Study for PTSD. <em>Annals of Applied Statistics</em>, accepted.</li>
 <li>J. Rim, <strong>Q. Xu</strong>, X. Tang, Y. Guo, A. Qu. (2025) Individualized Time-varying Nonparametric Model with An Application in Mobile Health. <em>Statistics in Medicine</em>, 44: e70005.</li>
 <li><strong>Q. Xu</strong>, X. Cao, G. Chen, H. Zeng, H. Fu, A. Qu. (2024) Multi-Label Residual Weighted Learning for Individualized Combination Treatment Rule. <em>Electronic Journal of Statistics</em> 18(1), 1517-1548.</li>
 <li>Y. Zhang, <strong>Q. Xu</strong>, N. Tang, A. Qu. (2024) Differential Private Data Release for Mixed-type Data via Latent Factor Model. <em>Journal of Machine Learning Research</em>, 25(116):1-37.</li>
