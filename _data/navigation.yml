@@ -1,0 +1,16 @@
+- title: Research
+  url: /#research
+
+- title: Background
+  url: /#background
+
+- title: CV
+  url: /CV.pdf
+  new_tab: true
+
+- title: Scholar
+  url: https://scholar.google.com/citations?user=iRt0ZAgAAAAJ&hl=en
+  new_tab: true
+
+- title: Email
+  url: mailto:qixu@andrew.cmu.edu

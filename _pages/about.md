@@ -1,41 +1,80 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: 
+subtitle:
+hide_header: true
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
+profile: false
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 10 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: false
+  limit: 6
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
+<div class="minimal-home minimal-home-single">
+  <p>
+    I am a postdoctoral researcher in the
+    <a href="https://www.cmu.edu/dietrich/statistics-datascience/index.html">Department of Statistics &amp; Data Science</a>
+    at Carnegie Mellon University, working with
+    <a href="https://kathrynmroeder.github.io">Kathryn Roeder</a>
+    and
+    <a href="https://www.stat.cmu.edu/~jinglei/">Jing Lei</a>. Previously, I received my PhD from the
+    <a href="https://www.stat.uci.edu">University of California, Irvine</a>, advised by
+    <a href="https://qu.pstat.ucsb.edu">Annie Qu</a>.
+    Before that, I earned an M.S. in Statistics from the
+    <a href="https://stat.illinois.edu">University of Illinois Urbana-Champaign</a>
+    and a B.S. in Mathematics from
+    <a href="https://math.tongji.edu.cn">Tongji University</a>.
+  </p>
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+  <p class="announcement-paragraph">
+    <strong>
+      I will join the <a href="https://cla.umn.edu/statistics">School of Statistics</a> at the University of Minnesota
+      as a tenure-track assistant professor.
+    </strong>
+  </p>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+  <p>
+    I am recently interested in:
+  </p>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+  <ul class="interest-list">
+    <li>
+      How can we integrate heterogeneous datasets for prediction, estimation, and inference with statistical rigor?
+      [method/theory]
+      [
+      <a href="https://arxiv.org/abs/2503.09494" target="_blank" rel="noopener noreferrer">1</a>,
+      <a href="https://arxiv.org/abs/2509.24158" target="_blank" rel="noopener noreferrer">2</a>,
+      <a href="https://arxiv.org/abs/2602.04178" target="_blank" rel="noopener noreferrer">3</a>,
+      <a href="https://arxiv.org/abs/2505.24259" target="_blank" rel="noopener noreferrer">4</a>,
+      <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2025.2602522" target="_blank" rel="noopener noreferrer">5</a>,
+      <a href="https://arxiv.org/abs/2505.24281" target="_blank" rel="noopener noreferrer">6</a>
+      ]
+    </li>
+    <li>
+      How can we integrate predictive and generative AI models into statistical problems?
+      [method/theory]
+      [<a href="https://arxiv.org/abs/2509.24158" target="_blank" rel="noopener noreferrer">1</a>]
+    </li>
+    <li>How will AI change the research pipeline and community? [application]</li>
+  </ul>
 
-I am currently a postdoctoral researcher in the <a href="https://www.cmu.edu/dietrich/statistics-datascience/index.html">Department of Statistics & Data Science</a> at Carnegie Mellon University, working with <a href="https://kathrynmroeder.github.io">Kathryn Roeder</a> and <a href="https://www.stat.cmu.edu/~jinglei/">Jing Lei</a>. 
+  <p>
+    Email me at <code>qixu[at]andrew.cmu.edu</code>. See my full publication list in
+    <a href="https://scholar.google.com/citations?user=iRt0ZAgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+      Google Scholar
+    </a>.
+  </p>
 
-Previously, I obtained my PhD degree from <a href="https://www.stat.uci.edu">University of California, Irvine</a>, under supervision of <a href="https://qu.pstat.ucsb.edu">Annie Qu</a>. Prior to that, I got my Master and Bachelor degree from <a href="https://stat.illinois.edu">University of Illinois at Urbana Champaign</a> and <a href="https://math.tongji.edu.cn">Tongji University</a>.
-
-**Recent research interests**
-- Direction 1: Integrating heterogeneous datasets for prediction, estimation and inference
-- Direction 2: Integrating AI (predictive, generative) models in the loop of statistical analysis
-- Tools: Semiparametric theory, representation learning, high-dimensional statistics
-
+  <section class="updates-section">
+    <h2>Recent Updates</h2>
+    {% include news.liquid limit=true %}
+  </section>
+</div>

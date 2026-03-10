@@ -1,0 +1,228 @@
+/*******************************************************************************
+ * Minimal homepage redesign.
+ ******************************************************************************/
+
+:root {
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: rgba(0, 0, 0, 0.04);
+  --global-text-color: #151515;
+  --global-text-color-light: #5c5c5c;
+  --global-theme-color: #1f5fbf;
+  --global-hover-color: #174b97;
+  --global-hover-text-color: #ffffff;
+  --global-footer-bg-color: transparent;
+  --global-footer-text-color: #5c5c5c;
+  --global-footer-link-color: #151515;
+  --global-divider-color: rgba(0, 0, 0, 0.12);
+  --global-card-bg-color: #ffffff;
+  --global-back-to-top-bg-color: rgba(0, 0, 0, 0.45);
+  --global-back-to-top-text-color: #ffffff;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #ffffff;
+}
+
+.homepage .container[role="main"] {
+  margin-top: 0 !important;
+}
+
+.no-header .container[role="main"] {
+  padding-top: 2.75rem;
+}
+
+.homepage .post {
+  padding: 0 0 3rem;
+}
+
+.homepage .post-header {
+  margin-bottom: 1rem;
+  max-width: 44rem;
+}
+
+.homepage .post-title {
+  margin-bottom: 0.4rem;
+  font-size: 2.15rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.homepage .desc {
+  margin: 0;
+  color: var(--global-text-color-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.minimal-nav {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.minimal-nav .navbar-brand,
+.minimal-nav .nav-link,
+footer .container {
+  font-family:
+    "Avenir Next",
+    "Segoe UI",
+    sans-serif;
+}
+
+.minimal-nav .navbar-brand {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.minimal-nav .nav-link {
+  padding-left: 1rem !important;
+  padding-right: 0 !important;
+  color: var(--global-text-color) !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.minimal-nav .nav-item.active .nav-link,
+.minimal-nav .nav-link:hover {
+  color: var(--global-theme-color) !important;
+}
+
+.minimal-home {
+  max-width: 46rem;
+}
+
+.minimal-home-single p,
+.minimal-home-single li,
+.minimal-home-single div {
+  font-size: 1.06rem;
+  line-height: 1.72;
+}
+
+.minimal-home-single p {
+  margin-bottom: 1rem;
+}
+
+.announcement-paragraph {
+  margin: 1.15rem 0 1.25rem;
+  font-size: 1.16rem;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
+.announcement-paragraph strong,
+.announcement-paragraph a {
+  font-weight: 700;
+}
+
+.interest-list {
+  margin: 0 0 1rem 1.45rem;
+  padding: 0;
+}
+
+.interest-list li {
+  margin-bottom: 0.2rem;
+}
+
+.inline-links {
+  margin-top: -0.15rem;
+}
+
+.inline-links span {
+  color: var(--global-text-color-light);
+  margin: 0 0.25rem;
+}
+
+.paper-list {
+  margin-top: 1.5rem;
+}
+
+.paper-list h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.paper-list ul {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.paper-list li {
+  margin-bottom: 0.8rem;
+}
+
+.paper-list li div {
+  color: var(--global-text-color);
+}
+
+.updates-section {
+  margin-top: 1.8rem;
+  padding-top: 0.35rem;
+}
+
+.updates-section h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.updates-section .news .table-responsive {
+  overflow: visible;
+}
+
+.updates-section .news table {
+  margin-bottom: 0;
+}
+
+.updates-section .news th,
+.updates-section .news td {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  vertical-align: top;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.updates-section .news th {
+  width: 8.5rem !important;
+  color: var(--global-text-color-light);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.updates-section .news td {
+  padding-left: 0;
+}
+
+code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.98em;
+}
+
+footer {
+  background: transparent;
+}
+
+footer .container {
+  max-width: 46rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 576px) {
+  .homepage .post-title {
+    font-size: 1.9rem;
+  }
+}
