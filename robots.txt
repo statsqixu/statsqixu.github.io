@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://statsqixu.github.io/sitemap.xml
+Sitemap: https://qi-xu.com/sitemap.xml
