@@ -136,13 +136,13 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post
-    output: true
+    output: false
   projects:
-    output: true
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -184,15 +184,20 @@ exclude:
   - readme_preview/
   - vendor
   - _pages/blog.md
+  - _pages/books.md
   - _pages/publications.md
   - _pages/personal.md
   - _pages/projects.md
   - _pages/repositories.md
+  - _pages/research.md
   - _pages/teaching.md
   - _pages/cv.md
   - _pages/profiles.md
   - _pages/dropdown.md
+  - _pages/news.md
+  - _posts/
   - _posts/2020-09-28-twitter.md
+  - requirements.txt
 keep_files:
   - CNAME
   - .nojekyll
@@ -201,7 +206,6 @@ keep_files:
 plugins:
   - jekyll-archives-v2
   - jekyll-email-protect
-  - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
@@ -210,7 +214,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
-  - jekyll-sitemap
   - jekyll-tabs
   - jekyll-terser
   - jekyll-toc
