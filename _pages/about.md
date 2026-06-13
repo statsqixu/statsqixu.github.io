@@ -13,7 +13,7 @@ social: false
 announcements:
   enabled: false
   scrollable: false
-  limit: 6
+  limit: 5
 
 latest_posts:
   enabled: false
@@ -55,7 +55,8 @@ latest_posts:
       <a href="https://arxiv.org/abs/2602.04178" target="_blank" rel="noopener noreferrer">3</a>,
       <a href="https://arxiv.org/abs/2505.24259" target="_blank" rel="noopener noreferrer">4</a>,
       <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2025.2602522" target="_blank" rel="noopener noreferrer">5</a>,
-      <a href="https://arxiv.org/abs/2505.24281" target="_blank" rel="noopener noreferrer">6</a>
+      <a href="https://arxiv.org/abs/2505.24281" target="_blank" rel="noopener noreferrer">6</a>,
+      <a href="https://arxiv.org/pdf/2505.06452" target="_blank" rel="noopener noreferrer">7</a>
       ]
     </li>
     <li>
