@@ -20,7 +20,7 @@ latest_posts:
 ---
 <div class="minimal-home minimal-home-single">
   <p>
-    I am a postdoctoral researcher in the
+    I am a tenure-track assistant professor in the <a href="https://cla.umn.edu/statistics">School of Statistics</a> at the University of Minnesota. Prior to this, I was a postdoctoral researcher in the
     <a href="https://www.cmu.edu/dietrich/statistics-datascience/index.html">Department of Statistics &amp; Data Science</a>
     at Carnegie Mellon University, working with
     <a href="https://kathrynmroeder.github.io">Kathryn Roeder</a>
@@ -32,13 +32,6 @@ latest_posts:
     <a href="https://stat.illinois.edu">University of Illinois Urbana-Champaign</a>
     and a B.S. in Mathematics from
     <a href="https://math.tongji.edu.cn">Tongji University</a>.
-  </p>
-
-  <p class="announcement-paragraph">
-    <strong>
-      I will join the <a href="https://cla.umn.edu/statistics">School of Statistics</a> at the University of Minnesota
-      as a tenure-track assistant professor.
-    </strong>
   </p>
 
   <p>
@@ -68,7 +61,7 @@ latest_posts:
   </ul>
 
   <p>
-    Email me at <code>qixu[at]andrew.cmu.edu</code>. See my full publication list in
+    Email me at <code>qixu[at]umn.edu</code>. See my full publication list in
     <a href="https://scholar.google.com/citations?user=iRt0ZAgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
       Google Scholar
     </a>.
