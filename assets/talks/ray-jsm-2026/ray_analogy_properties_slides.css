@@ -1412,3 +1412,235 @@
     transition: none !important;
   }
 }
+
+/* Conference-hall readability for slides 18-22. */
+@media (min-width: 1000px) and (min-height: 620px) {
+  .ray-analogy-zone,
+  .ray-properties-zone,
+  .ray-efficiency-zone,
+  .ray-gap-zone,
+  .ray-summary-zone {
+    width: min(96vw, 1760px) !important;
+  }
+
+  .ray-new-slide-citation {
+    font-size: clamp(1.05rem, 1.08vw, 1.2rem);
+  }
+
+  /* Slide 18: analogy table. */
+  .ray-analogy-table {
+    width: min(95vw, 1720px);
+    grid-template-columns:
+      minmax(230px, .8fr)
+      minmax(235px, .92fr)
+      minmax(265px, 1.02fr)
+      minmax(350px, 1.48fr);
+  }
+
+  .ray-analogy-header {
+    font-size: clamp(1.18rem, 1.2vw, 1.35rem);
+  }
+
+  .ray-analogy-row {
+    min-height: clamp(104px, 14.5vh, 150px);
+    padding-block: clamp(.55rem, 1.1vh, .82rem);
+  }
+
+  .ray-analogy-row h3 {
+    font-size: clamp(1.65rem, 1.7vw, 1.95rem) !important;
+  }
+
+  .ray-analogy-row p {
+    font-size: clamp(1.52rem, 1.6vw, 1.82rem) !important;
+  }
+
+  .ray-analogy-row p:last-child {
+    font-size: clamp(1.38rem, 1.48vw, 1.68rem) !important;
+  }
+
+  .ray-analogy-punch {
+    font-size: clamp(1.78rem, 1.9vw, 2.15rem) !important;
+  }
+
+  /* Slide 19: statistical properties and robustness. */
+  .ray-property-conditions {
+    font-size: clamp(1.55rem, 1.58vw, 1.8rem) !important;
+  }
+
+  .ray-property h3 {
+    font-size: clamp(1.58rem, 1.65vw, 1.88rem) !important;
+  }
+
+  .ray-property p {
+    font-size: clamp(1.68rem, 1.78vw, 2.02rem) !important;
+  }
+
+  .ray-robustness-heading > span {
+    font-size: clamp(1.62rem, 1.68vw, 1.92rem);
+  }
+
+  .ray-robustness-heading p {
+    font-size: clamp(1.4rem, 1.46vw, 1.65rem) !important;
+  }
+
+  .ray-robustness-punch {
+    font-size: clamp(1.7rem, 1.78vw, 2rem) !important;
+  }
+
+  .ray-robustness-consequence {
+    font-size: clamp(1.45rem, 1.5vw, 1.72rem) !important;
+  }
+
+  /* Slide 20: three sufficient structures. */
+  .ray-efficiency-zone {
+    gap: clamp(.75rem, 1.7vh, 1.25rem) !important;
+  }
+
+  .ray-efficiency-intro {
+    font-size: clamp(1.55rem, 1.6vw, 1.82rem) !important;
+  }
+
+  .ray-efficiency-conditions {
+    width: min(96vw, 1740px);
+  }
+
+  .ray-efficiency-condition {
+    min-height: clamp(320px, 42vh, 440px);
+    padding-inline: clamp(.62rem, 1.05vw, 1rem);
+  }
+
+  .ray-efficiency-condition h3 {
+    font-size: clamp(1.48rem, 1.54vw, 1.75rem) !important;
+  }
+
+  .ray-pattern-header,
+  .ray-pattern-row > span:first-child {
+    font-size: clamp(1.12rem, 1.16vw, 1.3rem);
+  }
+
+  .ray-pattern-caption {
+    font-size: clamp(1.22rem, 1.28vw, 1.45rem) !important;
+  }
+
+  .ray-efficiency-math,
+  .ray-efficiency-law {
+    font-size: clamp(1.25rem, 1.32vw, 1.5rem) !important;
+  }
+
+  .ray-efficiency-or {
+    font-size: clamp(1.15rem, 1.2vw, 1.35rem);
+  }
+
+  .ray-efficiency-result span {
+    font-size: clamp(1.32rem, 1.38vw, 1.55rem);
+  }
+
+  .ray-efficiency-result b {
+    font-size: clamp(1.4rem, 1.46vw, 1.65rem);
+  }
+
+  .ray-efficiency-result p {
+    font-size: clamp(1.55rem, 1.62vw, 1.84rem) !important;
+  }
+
+  .ray-efficiency-result strong {
+    font-size: clamp(1.68rem, 1.76vw, 2rem);
+  }
+
+  /* Slide 21: efficiency-gap formula and interpretation. */
+  .ray-gap-formula {
+    width: min(94vw, 1680px);
+    grid-template-columns:
+      minmax(245px, .9fr)
+      auto
+      minmax(440px, 1.52fr)
+      auto
+      minmax(225px, .72fr);
+  }
+
+  .ray-gap-formula-term span {
+    font-size: clamp(1.16rem, 1.2vw, 1.36rem);
+  }
+
+  .ray-gap-formula-term p {
+    font-size: clamp(1.9rem, 2vw, 2.3rem) !important;
+  }
+
+  .ray-gap-mechanism h3 {
+    font-size: clamp(1.6rem, 1.68vw, 1.9rem) !important;
+  }
+
+  .ray-gap-private-block strong {
+    font-size: clamp(1.52rem, 1.6vw, 1.82rem);
+  }
+
+  .ray-gap-private-block span,
+  .ray-gap-correlation-link span {
+    font-size: clamp(1.08rem, 1.12vw, 1.28rem);
+  }
+
+  .ray-gap-correlation-link p {
+    font-size: clamp(2rem, 2.15vw, 2.45rem) !important;
+  }
+
+  .ray-gap-rho-formula {
+    font-size: clamp(1.32rem, 1.38vw, 1.58rem) !important;
+  }
+
+  .ray-gap-meaning,
+  .ray-gap-structure-meaning {
+    font-size: clamp(1.22rem, 1.28vw, 1.46rem) !important;
+  }
+
+  .ray-gap-zero {
+    font-size: clamp(1.3rem, 1.36vw, 1.56rem) !important;
+  }
+
+  .ray-gap-pattern,
+  .ray-gap-missing {
+    font-size: clamp(1.3rem, 1.36vw, 1.55rem);
+  }
+
+  .ray-gap-conclusion span {
+    font-size: clamp(1.26rem, 1.32vw, 1.5rem);
+  }
+
+  .ray-gap-conclusion strong {
+    font-size: clamp(1.42rem, 1.5vw, 1.7rem);
+  }
+
+  /* Slide 22: summary and material beyond the talk. */
+  .ray-summary-zone {
+    gap: clamp(1rem, 2.2vh, 1.6rem) !important;
+  }
+
+  .ray-summary-columns {
+    width: min(94vw, 1680px);
+  }
+
+  .ray-summary-column {
+    padding: clamp(.55rem, 1.1vh, .85rem) clamp(1.6rem, 2.6vw, 2.55rem);
+  }
+
+  .ray-summary-column h3 {
+    margin-bottom: clamp(.75rem, 1.5vh, 1.1rem) !important;
+    font-size: clamp(2.05rem, 2.15vw, 2.45rem) !important;
+  }
+
+  .ray-summary-column ul {
+    gap: clamp(.75rem, 1.45vh, 1.05rem);
+  }
+
+  .ray-summary-column li {
+    min-height: clamp(96px, 11.5vh, 128px);
+  }
+
+  .ray-summary-column li strong {
+    font-size: clamp(1.65rem, 1.72vw, 1.95rem);
+  }
+
+  .ray-summary-column li span {
+    font-size: clamp(1.4rem, 1.46vw, 1.66rem);
+    line-height: 1.24;
+  }
+}
