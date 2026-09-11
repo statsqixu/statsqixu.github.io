@@ -1,0 +1,2230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="A scrolling, line-by-line STAT 5101 scratch-paper lecture on set operations.">
+  <title>STAT 5101 · Set Operations · Scratch Lecture</title>
+  <style>
+    :root {
+      --umn-maroon: #7a0019;
+      --umn-maroon-dark: #4d0010;
+      --umn-gold: #111111;
+      --example-gold: #ffcc33;
+      --example-blue: #155d9a;
+      --example-green: #196b57;
+      --paper: #fcfdff;
+      --paper-edge: #e9edf3;
+      --rule: rgba(17, 17, 17, 0.10);
+      --margin-rule: rgba(190, 44, 67, 0.34);
+      --ink: #16233a;
+      --blue-ink: #16233a;
+      --green-ink: #16233a;
+      --soft-ink: #343a44;
+      --note-font: ui-rounded, "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      --toolbar-height: 64px;
+      --paper-width: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--toolbar-height) + 28px);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #d9d9d9;
+      font-family: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+      font-size: 19px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .lecture-toolbar {
+      position: fixed;
+      z-index: 50;
+      inset: 0 0 auto 0;
+      min-height: var(--toolbar-height);
+      display: grid;
+      grid-template-columns: minmax(210px, 1fr) auto minmax(280px, 1fr);
+      align-items: center;
+      gap: 18px;
+      padding: 10px clamp(14px, 2.6vw, 38px);
+      color: #fff;
+      background: rgba(59, 0, 13, 0.94);
+      border-bottom: 3px solid #111;
+      box-shadow: 0 8px 28px rgba(23, 29, 39, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .course-mark {
+      min-width: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .course-mark span {
+      overflow: hidden;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-overflow: ellipsis;
+    }
+
+    .section-jumps {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .section-jumps a {
+      width: 12px;
+      height: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      border-radius: 50%;
+      color: transparent;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .section-jumps a:hover,
+    .section-jumps a:focus-visible,
+    .section-jumps a.is-current {
+      outline: none;
+      background: #fff;
+      border-color: #fff;
+      transform: scale(1.18);
+    }
+
+    .writing-controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toolbar-button {
+      min-height: 38px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 8px;
+      color: #fff;
+      background: transparent;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .toolbar-button.primary {
+      color: #fff;
+      background: #111;
+      border-color: #111;
+    }
+
+    .toolbar-button:hover { filter: brightness(1.08); }
+    .toolbar-button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+    .progress-wrap {
+      width: 92px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .progress-label {
+      color: #fff;
+      font-size: 0.7rem;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .progress-track {
+      height: 4px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: #fff;
+      transition: width 200ms ease;
+    }
+
+    .paper {
+      position: relative;
+      width: min(var(--paper-width), calc(100% - 30px));
+      min-height: 100vh;
+      margin: calc(var(--toolbar-height) + 22px) auto 108px;
+      overflow: hidden;
+      background-color: var(--paper);
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 47px,
+        var(--rule) 47px,
+        var(--rule) 48px
+      );
+      border: 1px solid var(--paper-edge);
+      border-radius: 4px;
+      box-shadow: 0 18px 55px rgba(39, 48, 62, 0.22);
+    }
+
+    .paper::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: clamp(54px, 7.5vw, 92px);
+      width: 2px;
+      background: var(--margin-rule);
+    }
+
+    .scratch-section {
+      position: relative;
+      z-index: 1;
+      min-height: 82vh;
+      padding: clamp(54px, 8vw, 108px) clamp(34px, 8.8vw, 124px) clamp(96px, 12vw, 164px);
+    }
+
+    .scratch-section + .scratch-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 12%;
+      width: 76%;
+      border-top: 3px solid var(--umn-maroon);
+      transform: rotate(-0.25deg);
+      opacity: 0.38;
+    }
+
+    .margin-number {
+      position: absolute;
+      top: clamp(58px, 8.2vw, 112px);
+      left: clamp(14px, 3vw, 38px);
+      color: var(--umn-maroon);
+      font-family: var(--note-font);
+      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      font-weight: 700;
+      transform: rotate(-6deg);
+    }
+
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--umn-maroon);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      margin-bottom: 26px;
+      color: var(--umn-maroon-dark);
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      line-height: 1.07;
+      letter-spacing: -0.025em;
+    }
+
+    h1 { max-width: 930px; font-size: clamp(3.1rem, 7.4vw, 6.8rem); }
+    h2 { max-width: 920px; font-size: clamp(2.25rem, 5vw, 4.25rem); }
+    h3 { font-size: clamp(1.25rem, 2.25vw, 1.85rem); }
+
+    .title-deck {
+      max-width: 870px;
+      margin-bottom: 44px;
+      color: var(--soft-ink);
+      font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    }
+
+    .date-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      margin-top: 50px;
+      color: var(--soft-ink);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .write-step {
+      position: relative;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(7px);
+      pointer-events: none;
+    }
+
+    .write-step.is-visible {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      animation: write-on 520ms cubic-bezier(0.2, 0.72, 0.25, 1) both;
+    }
+
+    .write-step.is-anchor { visibility: visible; opacity: 1; transform: none; pointer-events: auto; }
+
+    @keyframes write-on {
+      from { clip-path: inset(0 100% 0 0); opacity: 0.3; }
+      to { clip-path: inset(-8px -8px -8px -8px); opacity: 1; }
+    }
+
+    .ink-line {
+      max-width: 980px;
+      margin-bottom: 27px;
+      font-family: var(--note-font);
+      font-size: clamp(1.55rem, 2.9vw, 2.35rem);
+      font-weight: 650;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    .ink-line.small { font-size: clamp(1.3rem, 2.25vw, 1.8rem); }
+    .ink-line.maroon, .maroon-ink { color: var(--umn-maroon); }
+    .ink-line.blue, .blue-ink { color: var(--blue-ink); }
+    .ink-line.green, .green-ink { color: var(--green-ink); }
+
+    .math-line {
+      max-width: 1040px;
+      margin: 28px 0 34px;
+      color: #0d2748;
+      font-family: "STIX Two Math", "Cambria Math", "Times New Roman", serif;
+      font-size: clamp(1.55rem, 3.5vw, 2.7rem);
+      line-height: 1.45;
+    }
+
+    .math-line.center { text-align: center; }
+    .math-line.compact { margin-block: 16px; }
+
+    .underlined {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .underlined::after {
+      content: "";
+      position: absolute;
+      right: -3px;
+      bottom: -3px;
+      left: -2px;
+      height: 4px;
+      border-radius: 60% 20% 50% 30%;
+      background: var(--umn-maroon);
+      transform: rotate(-1deg);
+    }
+
+    .side-note {
+      width: min(360px, 86%);
+      margin: 18px 0 30px auto;
+      padding: 10px 16px;
+      color: var(--umn-maroon);
+      border-left: 4px solid #111;
+      font-family: var(--note-font);
+      font-size: clamp(1.15rem, 1.95vw, 1.5rem);
+      font-weight: 700;
+      line-height: 1.55;
+      transform: rotate(-1deg);
+    }
+
+    .set-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 42px;
+      max-width: 980px;
+      margin: 30px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .set-list li {
+      position: relative;
+      padding-left: 26px;
+      font-family: var(--note-font);
+      font-size: clamp(1.3rem, 2.35vw, 1.85rem);
+      font-weight: 650;
+    }
+
+    .set-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      border: 3px solid var(--umn-maroon);
+      border-radius: 50%;
+      transform: translateY(-50%) rotate(-7deg);
+    }
+
+    .lecture-outline {
+      max-width: 940px;
+      margin: 42px 0 0;
+      padding-left: clamp(34px, 5vw, 58px);
+      font-family: var(--note-font);
+      font-size: clamp(1.35rem, 2.65vw, 2rem);
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .lecture-outline li { padding: 8px 0 8px 12px; }
+    .lecture-outline li::marker { color: var(--umn-maroon); font-weight: 800; }
+
+    .experiment-strip {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 18px;
+      max-width: 1020px;
+      margin: 30px 0 40px;
+      padding: 22px 0;
+      border-block: 3px solid rgba(122, 0, 25, 0.32);
+    }
+
+    .experiment-strip div { min-width: 0; }
+    .experiment-strip strong { display: block; color: var(--umn-maroon); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .experiment-strip span { display: block; margin-top: 7px; font-family: Georgia, serif; font-size: clamp(1.15rem, 2.5vw, 1.75rem); }
+
+    .fundamental-operations {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 1020px;
+      margin: 24px 0;
+    }
+
+    .fundamental-operation {
+      min-width: 0;
+      padding: 16px 14px;
+      background: rgba(255, 255, 255, 0.64);
+      border: 2px solid #111;
+      border-top: 6px solid var(--umn-maroon);
+      border-radius: 10px 18px 9px 15px / 15px 10px 18px 9px;
+      text-align: center;
+    }
+
+    .fundamental-operation strong {
+      display: block;
+      color: var(--umn-maroon-dark);
+      font-family: Georgia, serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    }
+
+    .fundamental-operation span {
+      display: block;
+      margin-top: 7px;
+      color: #111;
+      font-family: var(--note-font);
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    .review-prompts {
+      display: grid;
+      gap: 38px;
+      max-width: 980px;
+      margin-top: 36px;
+    }
+
+    .review-prompt {
+      padding: 18px 2px 0;
+      border-top: 3px solid var(--umn-maroon);
+    }
+
+    .review-prompt p {
+      margin-bottom: 14px;
+      font-family: var(--note-font);
+      font-size: clamp(1.2rem, 2.35vw, 1.7rem);
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .event-prompts {
+      display: grid;
+      gap: 7px;
+      margin: 0 0 16px;
+      padding: 0;
+      list-style: none;
+      font-size: clamp(1.02rem, 1.9vw, 1.35rem);
+      line-height: 1.45;
+    }
+
+    .event-prompts strong {
+      color: var(--umn-maroon);
+      font-family: Georgia, serif;
+      font-size: 1.08em;
+    }
+
+    .answer-space {
+      min-height: 190px;
+      display: grid;
+      grid-template-rows: repeat(3, minmax(58px, 1fr));
+      padding: 0 18px;
+      background: rgba(255, 255, 255, 0.42);
+      border: 2px dashed rgba(17, 17, 17, 0.34);
+      border-radius: 8px 15px 9px 13px;
+    }
+
+    .answer-row {
+      display: flex;
+      align-items: center;
+      color: var(--umn-maroon);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.24);
+      font-family: Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .answer-row:last-child { border-bottom: 0; }
+
+    .transition-statement {
+      max-width: 980px;
+      margin: 52px 0 0;
+      padding: 23px 26px;
+      color: #fff;
+      background: var(--umn-maroon);
+      border: 4px solid #111;
+      border-radius: 16px 28px 14px 24px / 24px 14px 28px 16px;
+      font-family: var(--note-font);
+      font-size: clamp(1.35rem, 2.7vw, 2.05rem);
+      font-weight: 750;
+      line-height: 1.45;
+      transform: rotate(-0.25deg);
+    }
+
+    .operation-stack {
+      display: grid;
+      gap: 38px;
+      max-width: 1040px;
+      margin: 28px 0 42px;
+    }
+
+    .operation-definition {
+      padding: clamp(18px, 3vw, 30px);
+      background: rgba(255, 255, 255, 0.82);
+      border: 2px solid #111;
+      border-left: 7px solid var(--umn-maroon);
+      border-radius: 12px 28px 14px 22px / 22px 13px 27px 15px;
+      box-shadow: 4px 5px 0 rgba(17, 17, 17, 0.12);
+      break-inside: avoid;
+    }
+
+    .operation-definition h3 {
+      margin: 0 0 10px;
+      color: var(--umn-maroon-dark);
+      font-family: var(--note-font);
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+    }
+
+    .operation-definition .math-line { margin: 10px 0; }
+
+    .operation-figure {
+      max-width: 590px;
+      margin: 18px auto 2px;
+      padding: 12px 16px 14px;
+      background: #fff;
+      border: 2px solid var(--umn-maroon);
+      border-radius: 20px 12px 22px 14px / 14px 22px 12px 20px;
+      break-inside: avoid;
+    }
+
+    .static-venn {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .static-venn .universe { fill: #fff; stroke: #111; stroke-width: 3; }
+    .static-venn .region-fill { fill: var(--umn-maroon); opacity: 0.3; }
+    .static-venn .set-outline { fill: none; stroke-width: 4; }
+    .static-venn .set-a-outline { stroke: var(--umn-maroon); }
+    .static-venn .set-b-outline { stroke: #111; }
+    .static-venn .set-label { font-family: Georgia, serif; font-size: 28px; font-style: italic; font-weight: 700; }
+    .static-venn .omega-label { fill: #111; font-family: Georgia, serif; font-size: 24px; font-style: italic; }
+
+    .operation-figure figcaption {
+      margin-top: 6px;
+      color: var(--umn-maroon-dark);
+      font-family: Georgia, serif;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .region-practice {
+      max-width: 1040px;
+      margin: 54px 0 24px;
+      padding-top: 30px;
+      border-top: 4px solid var(--umn-maroon);
+    }
+
+    .region-practice h3 {
+      margin: 0;
+      color: var(--umn-maroon-dark);
+      font-family: var(--note-font);
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+    }
+
+    .region-exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .region-exercise {
+      margin: 0;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 2px solid #111;
+      border-radius: 14px 24px 12px 20px / 20px 13px 24px 12px;
+      break-inside: avoid;
+    }
+
+    .region-exercise .static-venn {
+      max-width: 390px;
+      margin-inline: auto;
+    }
+
+    .region-exercise figcaption {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: end;
+      min-height: 44px;
+      margin-top: 8px;
+      color: #111;
+      font-family: var(--note-font);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      font-weight: 700;
+    }
+
+    .expression-blank {
+      display: block;
+      min-width: 0;
+      min-height: 38px;
+      border-bottom: 3px solid var(--umn-maroon);
+    }
+
+    .translation-list {
+      max-width: 960px;
+      margin: 28px 0;
+    }
+
+    .translation-row {
+      display: grid;
+      grid-template-columns: minmax(210px, 1.2fr) minmax(210px, 1fr);
+      gap: 24px;
+      align-items: center;
+      padding: 16px 5px;
+      border-bottom: 2px dashed rgba(82, 97, 119, 0.38);
+      break-inside: avoid;
+    }
+
+    .translation-row span:first-child { font-family: var(--note-font); font-size: clamp(1.3rem, 2.4vw, 1.85rem); font-weight: 700; }
+
+    .diagram-blank {
+      display: block;
+      width: 100%;
+      min-height: 138px;
+      background: rgba(255, 255, 255, 0.42);
+      border: 2px dashed rgba(122, 0, 25, 0.58);
+      border-radius: 16px 10px 18px 12px / 12px 18px 10px 16px;
+    }
+
+    .proof-chain {
+      max-width: 900px;
+      margin: 30px auto 45px;
+      padding-left: clamp(12px, 3vw, 40px);
+      border-left: 6px solid #111;
+    }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.1fr) minmax(230px, 1fr);
+      gap: 28px;
+      align-items: baseline;
+      min-height: 74px;
+      padding: 10px 0;
+    }
+
+    .proof-row .statement { font-family: "STIX Two Math", "Cambria Math", Georgia, serif; font-size: clamp(1.3rem, 2.8vw, 2rem); }
+    .proof-row .reason { color: var(--soft-ink); font-family: var(--note-font); font-size: clamp(1.1rem, 1.95vw, 1.42rem); font-weight: 600; }
+
+    .set-proof-recipe {
+      max-width: 940px;
+      margin: 54px 0 20px;
+      padding: clamp(20px, 3vw, 30px);
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid #111;
+      border-top: 7px solid var(--umn-maroon);
+      border-radius: 12px 24px 14px 20px / 20px 12px 24px 14px;
+      break-inside: avoid;
+    }
+
+    .set-proof-recipe h3 {
+      margin: 0;
+      color: var(--umn-maroon-dark);
+      font-family: var(--note-font);
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+    }
+
+    .set-proof-recipe ol {
+      margin: 20px 0;
+      padding-left: 30px;
+      font-family: var(--note-font);
+      font-size: clamp(1.1rem, 2vw, 1.42rem);
+      font-weight: 650;
+      line-height: 1.48;
+    }
+
+    .set-proof-recipe li { margin: 10px 0; padding-left: 5px; }
+    .set-proof-recipe li::marker { color: var(--umn-maroon); font-weight: 800; }
+    .set-proof-recipe .math-line { margin: 16px 0 0; }
+
+    .demorgan-diagrams {
+      display: grid;
+      gap: 30px;
+      max-width: 1040px;
+      margin: 28px 0 42px;
+    }
+
+    .demorgan-law-card {
+      margin: 0;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255, 255, 255, 0.84);
+      border: 2px solid #111;
+      border-left: 7px solid var(--umn-maroon);
+      border-radius: 16px 30px 14px 24px / 24px 15px 28px 16px;
+      box-shadow: 4px 5px 0 rgba(17, 17, 17, 0.12);
+      break-inside: avoid;
+    }
+
+    .demorgan-law-card > figcaption {
+      margin-bottom: 16px;
+      color: var(--umn-maroon-dark);
+      font-family: var(--note-font);
+      font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+      font-weight: 750;
+    }
+
+    .diagram-equivalence {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: clamp(10px, 2vw, 22px);
+      align-items: center;
+    }
+
+    .demorgan-panel {
+      min-width: 0;
+      padding: 10px;
+      background: #fff;
+      border: 2px solid rgba(122, 0, 25, 0.55);
+      border-radius: 16px 10px 18px 12px / 12px 18px 10px 16px;
+      text-align: center;
+    }
+
+    .demorgan-panel strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--umn-maroon-dark);
+      font-family: Georgia, serif;
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+    }
+
+    .diagram-equals {
+      color: #111;
+      font-family: Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 800;
+    }
+
+    .partition-line {
+      display: flex;
+      width: min(900px, 100%);
+      min-height: 115px;
+      margin: 34px 0;
+      border: 4px solid #36465d;
+      border-radius: 9px 14px 8px 12px;
+      overflow: hidden;
+    }
+
+    .partition-cell {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      padding: 15px;
+      font-family: Georgia, serif;
+      font-size: clamp(1.2rem, 2.8vw, 2rem);
+      text-align: center;
+    }
+
+    .partition-cell + .partition-cell { border-left: 4px solid #36465d; }
+    .partition-cell:nth-child(1) { background: rgba(122, 0, 25, 0.12); }
+    .partition-cell:nth-child(2) { background: rgba(255, 204, 51, 0.25); }
+    .partition-cell:nth-child(3) { background: rgba(21, 93, 154, 0.12); }
+
+    .partition-conditions {
+      display: grid;
+      gap: 6px;
+      max-width: 840px;
+      margin: 16px 0 28px;
+      padding: 10px 0 10px clamp(16px, 4vw, 38px);
+      border-left: 6px solid var(--umn-maroon);
+      break-inside: avoid;
+    }
+
+    .partition-conditions .math-line {
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .representation-grid {
+      display: grid;
+      gap: 0;
+      margin-top: 24px;
+      border: 2px solid #111;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .representation-header,
+    .representation-row {
+      display: grid;
+      grid-template-columns: minmax(170px, 0.8fr) minmax(260px, 1.25fr) minmax(220px, 1fr);
+      align-items: center;
+    }
+
+    .representation-header {
+      color: #fff;
+      background: var(--umn-maroon);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .representation-header span,
+    .representation-row > * { padding: 14px 16px; }
+
+    .representation-header span + span,
+    .representation-row > * + * { border-left: 1px solid rgba(17, 17, 17, 0.28); }
+
+    .representation-row {
+      background: rgba(255, 255, 255, 0.78);
+      break-inside: avoid;
+    }
+
+    .representation-row + .representation-row { border-top: 2px solid rgba(17, 17, 17, 0.34); }
+
+    .representation-notation {
+      color: var(--umn-maroon-dark);
+      font-family: Georgia, serif;
+      font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .representation-words {
+      font-family: var(--note-font);
+      font-size: clamp(1.1rem, 1.9vw, 1.4rem);
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .representation-diagram { margin: 0; }
+    .representation-diagram .static-venn { max-width: 240px; margin-inline: auto; }
+    .representation-diagram .set-outline { stroke-width: 3; }
+    .representation-diagram .set-label { font-size: 22px; }
+    .representation-diagram .omega-label { font-size: 18px; }
+
+    .derivation {
+      max-width: 910px;
+      margin: 32px 0;
+      padding: 20px 0 20px clamp(16px, 4vw, 46px);
+      border-left: 6px solid var(--umn-maroon);
+    }
+
+    .derivation .math-line { margin: 8px 0; }
+
+    .ink-canvas {
+      position: fixed;
+      z-index: 45;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+
+    .ink-canvas.is-active {
+      pointer-events: auto;
+      touch-action: none;
+      cursor: crosshair;
+    }
+
+    body.is-inking {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .ink-toolbar {
+      position: fixed;
+      z-index: 60;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      width: max-content;
+      max-width: calc(100vw - 32px);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px;
+      overflow-x: auto;
+      color: #111;
+      background: rgba(255, 255, 255, 0.96);
+      border: 2px solid #111;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(17, 17, 17, 0.22);
+      backdrop-filter: blur(12px);
+    }
+
+    .ink-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex: 0 0 auto;
+    }
+
+    .ink-group + .ink-group {
+      padding-left: 8px;
+      border-left: 1px solid #a8a8a8;
+    }
+
+    .ink-button {
+      min-width: 44px;
+      min-height: 42px;
+      padding: 7px 10px;
+      color: #111;
+      background: #fff;
+      border: 1.5px solid #777;
+      border-radius: 8px;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 750;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .ink-button:hover { background: #f1f1f1; }
+    .ink-button:focus-visible { outline: 3px solid var(--umn-maroon); outline-offset: 2px; }
+    .ink-button[aria-pressed="true"] { color: #fff; background: var(--umn-maroon); border-color: var(--umn-maroon); }
+    .ink-button:disabled { opacity: 0.38; cursor: default; }
+
+    .ink-color {
+      position: relative;
+      width: 42px;
+      min-width: 42px;
+      padding: 0;
+      font-size: 0;
+    }
+
+    .ink-color::after {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border-radius: 50%;
+      background: var(--swatch);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .ink-color[aria-pressed="true"] {
+      background: #fff;
+      border: 3px solid var(--umn-maroon);
+    }
+
+    .ink-status {
+      max-width: 210px;
+      padding-inline: 5px;
+      color: #343a44;
+      font-size: 0.76rem;
+      line-height: 1.25;
+      white-space: normal;
+    }
+
+    .print-ink-layer {
+      display: none;
+      position: absolute;
+      z-index: 30;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 820px) {
+      :root { --toolbar-height: 112px; }
+      .lecture-toolbar { grid-template-columns: 1fr auto; gap: 8px 14px; }
+      .section-jumps { grid-column: 1 / -1; grid-row: 2; justify-content: center; }
+      .writing-controls .secondary-control { display: none; }
+      .progress-wrap { width: 70px; }
+      .scratch-section { min-height: 72vh; padding-left: clamp(38px, 11vw, 82px); padding-right: clamp(24px, 7vw, 54px); }
+      .paper::before { left: clamp(28px, 7vw, 52px); }
+      .margin-number { left: 10px; }
+      .set-list, .experiment-strip, .fundamental-operations, .region-exercise-grid { grid-template-columns: 1fr; }
+      .experiment-strip { gap: 12px; }
+      .translation-row, .proof-row { grid-template-columns: 1fr; }
+      .translation-row { gap: 12px; }
+      .proof-row { gap: 2px; }
+      .proof-row { min-height: 100px; }
+      .representation-header, .representation-row { grid-template-columns: 150px minmax(220px, 1fr) 210px; }
+      .partition-cell { padding: 10px 5px; }
+    }
+
+    @media (max-width: 500px) {
+      body { font-size: 16px; }
+      .course-mark span, .progress-wrap { display: none; }
+      .lecture-toolbar { grid-template-columns: 1fr auto; }
+      .paper { width: 100%; margin-bottom: 0; border: 0; border-radius: 0; }
+      .scratch-section:last-child { padding-bottom: 130px; }
+      .writing-controls { gap: 5px; }
+      .toolbar-button { min-height: 40px; padding-inline: 10px; }
+      .ink-toolbar { right: 8px; bottom: 8px; left: 8px; max-width: calc(100vw - 16px); padding: 7px; }
+      .ink-status { display: none; }
+      .ink-button { min-height: 40px; padding-inline: 8px; }
+      .operation-definition { padding-inline: 14px; }
+      .operation-figure { padding-inline: 8px; }
+      .diagram-equivalence { grid-template-columns: 1fr; gap: 8px; }
+      .demorgan-panel { width: min(100%, 330px); margin-inline: auto; }
+      .diagram-equals { line-height: 1; text-align: center; }
+      .representation-grid { border: 0; gap: 18px; overflow: visible; }
+      .representation-header { display: none; }
+      .representation-row { grid-template-columns: 1fr; border: 2px solid #111; border-radius: 12px; }
+      .representation-row + .representation-row { border-top: 2px solid #111; }
+      .representation-row > * + * { border-left: 0; border-top: 1px solid rgba(17, 17, 17, 0.24); }
+      .partition-line { min-height: 96px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+
+    @media print {
+      @page { size: letter portrait; margin: 0.45in; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      body { background: #fff; }
+      .lecture-toolbar, .ink-toolbar, .ink-canvas { display: none; }
+      .paper { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      .scratch-section { min-height: auto; padding-block: 54px 80px; }
+      .scratch-section + .scratch-section { break-before: page; }
+      .representation-grid { overflow: visible; }
+      .fundamental-operations, .operation-definition, .operation-figure, .region-exercise, .translation-row, .demorgan-law-card, .set-proof-recipe, .partition-line, .partition-conditions, .representation-row, .experiment-strip { break-inside: avoid; }
+      .write-step { visibility: visible !important; opacity: 1 !important; transform: none !important; pointer-events: auto; }
+      .print-ink-layer { display: block; }
+      body, .paper { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <header class="lecture-toolbar" aria-label="Lecture controls">
+    <div class="course-mark">STAT 5101 <span>Set operations · scratch lecture</span></div>
+    <nav class="section-jumps" aria-label="Jump to a section">
+      <a href="#start" class="is-current" aria-label="Opening"></a>
+      <a href="#review" aria-label="Review sample spaces"></a>
+      <a href="#model" aria-label="Build the events"></a>
+      <a href="#operations" aria-label="Set operations"></a>
+      <a href="#language" aria-label="Translate language"></a>
+      <a href="#demorgan" aria-label="De Morgan's laws"></a>
+      <a href="#partitions" aria-label="Disjoint events and partitions"></a>
+      <a href="#representations" aria-label="Notation, words, and diagrams"></a>
+      <a href="#probability" aria-label="Probability preview"></a>
+      <a href="#wrap" aria-label="Summary"></a>
+    </nav>
+    <div class="writing-controls">
+      <button class="toolbar-button secondary-control" id="undoStep" type="button" title="Hide the most recently written line">Back</button>
+      <button class="toolbar-button primary" id="revealNext" type="button">Write next</button>
+      <button class="toolbar-button secondary-control" id="showAll" type="button">Show all</button>
+      <button class="toolbar-button secondary-control" id="resetLecture" type="button">Reset</button>
+      <div class="progress-wrap" aria-label="Writing progress">
+        <span class="progress-label" id="progressLabel">0 / 0</span>
+        <span class="progress-track"><span class="progress-bar" id="progressBar"></span></span>
+      </div>
+    </div>
+  </header>
+
+  <canvas class="ink-canvas" id="inkCanvas" aria-hidden="true"></canvas>
+  <div class="ink-toolbar" role="toolbar" aria-label="Apple Pencil annotation tools">
+    <div class="ink-group" aria-label="Interaction mode">
+      <button class="ink-button" type="button" data-ink-mode="navigate" aria-pressed="true">Navigate</button>
+      <button class="ink-button" type="button" data-ink-mode="write" aria-pressed="false">Write</button>
+    </div>
+    <div class="ink-group" aria-label="Drawing tool">
+      <button class="ink-button" type="button" data-ink-tool="pen" aria-pressed="true">Pen</button>
+      <button class="ink-button" type="button" data-ink-tool="highlighter" aria-pressed="false">Highlight</button>
+      <button class="ink-button" type="button" data-ink-tool="eraser" aria-pressed="false">Eraser</button>
+    </div>
+    <div class="ink-group" aria-label="Ink color">
+      <button class="ink-button ink-color" type="button" data-ink-color="#111111" aria-label="Black ink" aria-pressed="true" style="--swatch: #111111">Black</button>
+      <button class="ink-button ink-color" type="button" data-ink-color="#7a0019" aria-label="Maroon ink" aria-pressed="false" style="--swatch: #7a0019">Maroon</button>
+    </div>
+    <div class="ink-group" aria-label="Annotation history and saving">
+      <button class="ink-button" id="inkUndo" type="button" disabled>Undo</button>
+      <button class="ink-button" id="inkRedo" type="button" disabled>Redo</button>
+      <button class="ink-button" id="inkClearSection" type="button" disabled>Clear section</button>
+      <button class="ink-button" id="inkSaveCopy" type="button" title="Choose where to save an annotated HTML copy">Save HTML&hellip;</button>
+      <button class="ink-button" id="inkSavePdf" type="button" title="Open the print dialog, then choose Save as PDF">Save PDF&hellip;</button>
+    </div>
+    <output class="ink-status" id="inkStatus" aria-live="polite">Navigate mode · switch to Write for Pencil ink</output>
+  </div>
+
+  <main class="paper" id="lecturePaper">
+    <section class="scratch-section" id="start" data-section>
+      <span class="margin-number" aria-hidden="true">01</span>
+      <p class="eyebrow write-step is-anchor">STAT 5101 · Theory of Statistics I · September 11, 2026</p>
+      <h1 class="write-step is-anchor">Set operations</h1>
+      <ol class="lecture-outline write-step is-visible">
+        <li>Review: sample spaces and events</li>
+        <li>Union, intersection, complement, and difference</li>
+        <li>Translating words into set notation</li>
+        <li>De Morgan’s laws, disjoint events, and partitions</li>
+        <li>Connecting set operations to probability</li>
+      </ol>
+    </section>
+
+    <section class="scratch-section" id="review" data-section>
+      <span class="margin-number" aria-hidden="true">02</span>
+      <h2 class="write-step">Review: sample spaces and events</h2>
+      <p class="math-line write-step">A <strong>sample space</strong> <i>&Omega;</i> is a nonempty set containing every possible outcome of a random experiment.</p>
+      <p class="math-line write-step">An <strong>event</strong> <i>A</i> is a subset of <i>&Omega;</i>. It occurs when the observed outcome <i>&omega;</i> belongs to <i>A</i>.</p>
+      <p class="ink-line maroon write-step">For each experiment, identify <i>&Omega;</i> and write the two events as subsets of <i>&Omega;</i>.</p>
+      <div class="review-prompts">
+        <article class="review-prompt write-step">
+          <p>1. An emergency department records the number of new patients who arrive between noon and 1:00 p.m.</p>
+          <ul class="event-prompts"><li><strong><i>A</i>:</strong> No more than four new patients arrive.</li><li><strong><i>B</i>:</strong> At least two new patients arrive.</li></ul>
+          <div class="answer-space" aria-label="Blank space for the sample space and two events for emergency department arrivals"><div class="answer-row"><span>&Omega; =</span></div><div class="answer-row"><span><i>A</i> =</span></div><div class="answer-row"><span><i>B</i> =</span></div></div>
+        </article>
+        <article class="review-prompt write-step">
+          <p>2. A commuter reaches a bus stop and records the waiting time, in minutes, until the next bus arrives.</p>
+          <ul class="event-prompts"><li><strong><i>A</i>:</strong> The wait is less than 10 minutes.</li><li><strong><i>B</i>:</strong> The wait is between 5 and 15 minutes, inclusive.</li></ul>
+          <div class="answer-space" aria-label="Blank space for the sample space and two events for bus waiting time"><div class="answer-row"><span>&Omega; =</span></div><div class="answer-row"><span><i>A</i> =</span></div><div class="answer-row"><span><i>B</i> =</span></div></div>
+        </article>
+        <article class="review-prompt write-step">
+          <p>3. A blood donation is selected, and its ABO group and Rh sign are recorded.</p>
+          <ul class="event-prompts"><li><strong><i>A</i>:</strong> The donation has blood group O.</li><li><strong><i>B</i>:</strong> The donation is Rh positive.</li></ul>
+          <div class="answer-space" aria-label="Blank space for the sample space and two events for blood type and Rh sign"><div class="answer-row"><span>&Omega; =</span></div><div class="answer-row"><span><i>A</i> =</span></div><div class="answer-row"><span><i>B</i> =</span></div></div>
+        </article>
+        <article class="review-prompt write-step">
+          <p>4. A weather station records tomorrow’s daily low and high temperatures as an ordered pair.</p>
+          <ul class="event-prompts"><li><strong><i>A</i>:</strong> The high temperature is at least 90&deg;F.</li><li><strong><i>B</i>:</strong> The low temperature is below 32&deg;F.</li></ul>
+          <div class="answer-space" aria-label="Blank space for the sample space and two events for daily low and high temperature"><div class="answer-row"><span>&Omega; =</span></div><div class="answer-row"><span><i>A</i> =</span></div><div class="answer-row"><span><i>B</i> =</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="scratch-section" id="model" data-section>
+      <span class="margin-number" aria-hidden="true">03</span>
+      <h2 class="write-step">Union, intersection, complement, and difference</h2>
+      <p class="ink-line maroon write-step">Union, intersection, and complement are the three standard Boolean operations on sets.</p>
+      <div class="fundamental-operations" aria-label="Three fundamental set operations">
+        <div class="fundamental-operation write-step"><strong>union: <i>A</i> &cup; <i>B</i></strong><span>in <i>A</i> or <i>B</i>, or both</span></div>
+        <div class="fundamental-operation write-step"><strong>intersection: <i>A</i> &cap; <i>B</i></strong><span>in both <i>A</i> and <i>B</i></span></div>
+        <div class="fundamental-operation write-step"><strong>complement: <i>A</i><sup>c</sup></strong><span>in &Omega;, but not in <i>A</i></span></div>
+      </div>
+      <p class="ink-line write-step">Together, these operations can express every <span class="underlined">finite Boolean combination</span> of sets.</p>
+    </section>
+
+    <section class="scratch-section" id="operations" data-section>
+      <span class="margin-number" aria-hidden="true">04</span>
+      <h2 class="write-step">Visualizing the operations</h2>
+      <p class="ink-line write-step">The shaded region shows the result of each fundamental operation.</p>
+
+      <div class="operation-stack">
+        <article class="operation-definition">
+          <h3 class="write-step">Union: <i>A</i> &cup; <i>B</i></h3>
+          <p class="math-line compact write-step"><i>A</i> &cup; <i>B</i> = {<i>&omega;</i> &isin; &Omega; : <i>&omega;</i> &isin; <i>A</i> <strong>or</strong> <i>&omega;</i> &isin; <i>B</i>}</p>
+          <p class="ink-line small write-step">Union means inclusive “or”: <i>A</i>, or <i>B</i>, or both.</p>
+          <figure class="operation-figure write-step">
+            <svg class="static-venn" viewBox="0 0 440 240" role="img" aria-labelledby="unionFigureTitle unionFigureDesc">
+              <title id="unionFigureTitle">Venn diagram of the union of A and B</title>
+              <desc id="unionFigureDesc">Both circles A and B, including their overlap, are shaded.</desc>
+              <rect class="universe" x="15" y="15" width="410" height="210" rx="12"></rect>
+              <circle class="region-fill" cx="170" cy="125" r="82"></circle>
+              <circle class="region-fill" cx="270" cy="125" r="82"></circle>
+              <circle class="set-outline set-a-outline" cx="170" cy="125" r="82"></circle>
+              <circle class="set-outline set-b-outline" cx="270" cy="125" r="82"></circle>
+              <text class="omega-label" x="29" y="43">&Omega;</text>
+              <text class="set-label" x="112" y="75" fill="#7a0019">A</text>
+              <text class="set-label" x="315" y="75" fill="#111">B</text>
+            </svg>
+            <figcaption>Shade everything in <i>A</i> or <i>B</i>, including the overlap.</figcaption>
+          </figure>
+        </article>
+
+        <article class="operation-definition">
+          <h3 class="write-step">Intersection: <i>A</i> &cap; <i>B</i></h3>
+          <p class="math-line compact write-step"><i>A</i> &cap; <i>B</i> = {<i>&omega;</i> &isin; &Omega; : <i>&omega;</i> &isin; <i>A</i> <strong>and</strong> <i>&omega;</i> &isin; <i>B</i>}</p>
+          <p class="ink-line small write-step">Intersection means both conditions hold for the same outcome.</p>
+          <figure class="operation-figure write-step">
+            <svg class="static-venn" viewBox="0 0 440 240" role="img" aria-labelledby="intersectionFigureTitle intersectionFigureDesc">
+              <title id="intersectionFigureTitle">Venn diagram of the intersection of A and B</title>
+              <desc id="intersectionFigureDesc">Only the overlap between circles A and B is shaded.</desc>
+              <defs>
+                <clipPath id="intersectionClipB"><circle cx="270" cy="125" r="82"></circle></clipPath>
+              </defs>
+              <rect class="universe" x="15" y="15" width="410" height="210" rx="12"></rect>
+              <circle class="region-fill" cx="170" cy="125" r="82" clip-path="url(#intersectionClipB)"></circle>
+              <circle class="set-outline set-a-outline" cx="170" cy="125" r="82"></circle>
+              <circle class="set-outline set-b-outline" cx="270" cy="125" r="82"></circle>
+              <text class="omega-label" x="29" y="43">&Omega;</text>
+              <text class="set-label" x="112" y="75" fill="#7a0019">A</text>
+              <text class="set-label" x="315" y="75" fill="#111">B</text>
+            </svg>
+            <figcaption>Shade only the outcomes shared by <i>A</i> and <i>B</i>.</figcaption>
+          </figure>
+        </article>
+
+        <article class="operation-definition">
+          <h3 class="write-step">Complement: <i>A</i><sup>c</sup></h3>
+          <p class="math-line compact write-step"><i>A</i><sup>c</sup> = {<i>&omega;</i> &isin; &Omega; : <i>&omega;</i> &notin; <i>A</i>}</p>
+          <p class="ink-line small write-step">A complement is always relative to the chosen sample space &Omega;.</p>
+          <figure class="operation-figure write-step">
+            <svg class="static-venn" viewBox="0 0 440 240" role="img" aria-labelledby="complementFigureTitle complementFigureDesc">
+              <title id="complementFigureTitle">Venn diagram of the complement of A</title>
+              <desc id="complementFigureDesc">Everything in the sample space outside circle A is shaded.</desc>
+              <defs>
+                <mask id="complementMaskA" maskUnits="userSpaceOnUse" x="15" y="15" width="410" height="210">
+                  <rect x="15" y="15" width="410" height="210" rx="12" fill="white"></rect>
+                  <circle cx="170" cy="125" r="82" fill="black"></circle>
+                </mask>
+              </defs>
+              <rect class="universe" x="15" y="15" width="410" height="210" rx="12"></rect>
+              <rect class="region-fill" x="15" y="15" width="410" height="210" rx="12" mask="url(#complementMaskA)"></rect>
+              <circle class="set-outline set-a-outline" cx="170" cy="125" r="82"></circle>
+              <circle class="set-outline set-b-outline" cx="270" cy="125" r="82"></circle>
+              <text class="omega-label" x="29" y="43">&Omega;</text>
+              <text class="set-label" x="112" y="75" fill="#7a0019">A</text>
+              <text class="set-label" x="315" y="75" fill="#111">B</text>
+            </svg>
+            <figcaption>Shade everything in &Omega; that is outside <i>A</i>.</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <div class="region-practice">
+        <h3 class="write-step">Practice: write the shaded region</h3>
+        <p class="ink-line write-step">For each diagram, write an expression using only union, intersection, and complement.</p>
+        <div class="region-exercise-grid">
+          <figure class="region-exercise write-step">
+            <svg class="static-venn" viewBox="0 0 360 210" role="img" aria-label="Venn diagram with only the part of A outside B shaded">
+              <defs>
+                <mask id="practiceAOnlyMask" maskUnits="userSpaceOnUse" x="10" y="10" width="340" height="190">
+                  <rect x="10" y="10" width="340" height="190" fill="black"></rect>
+                  <circle cx="140" cy="110" r="70" fill="white"></circle>
+                  <circle cx="220" cy="110" r="70" fill="black"></circle>
+                </mask>
+              </defs>
+              <rect class="universe" x="10" y="10" width="340" height="190" rx="11"></rect>
+              <rect class="region-fill" x="10" y="10" width="340" height="190" mask="url(#practiceAOnlyMask)"></rect>
+              <circle class="set-outline set-a-outline" cx="140" cy="110" r="70"></circle>
+              <circle class="set-outline set-b-outline" cx="220" cy="110" r="70"></circle>
+              <text class="omega-label" x="22" y="38">&Omega;</text>
+              <text class="set-label" x="88" y="68" fill="#7a0019">A</text>
+              <text class="set-label" x="260" y="68" fill="#111">B</text>
+            </svg>
+            <figcaption><span>1. expression:</span><span class="expression-blank" aria-label="Blank space for a set expression"></span></figcaption>
+          </figure>
+
+          <figure class="region-exercise write-step">
+            <svg class="static-venn" viewBox="0 0 360 210" role="img" aria-label="Venn diagram with only the part of B outside A shaded">
+              <defs>
+                <mask id="practiceBOnlyMask" maskUnits="userSpaceOnUse" x="10" y="10" width="340" height="190">
+                  <rect x="10" y="10" width="340" height="190" fill="black"></rect>
+                  <circle cx="220" cy="110" r="70" fill="white"></circle>
+                  <circle cx="140" cy="110" r="70" fill="black"></circle>
+                </mask>
+              </defs>
+              <rect class="universe" x="10" y="10" width="340" height="190" rx="11"></rect>
+              <rect class="region-fill" x="10" y="10" width="340" height="190" mask="url(#practiceBOnlyMask)"></rect>
+              <circle class="set-outline set-a-outline" cx="140" cy="110" r="70"></circle>
+              <circle class="set-outline set-b-outline" cx="220" cy="110" r="70"></circle>
+              <text class="omega-label" x="22" y="38">&Omega;</text>
+              <text class="set-label" x="88" y="68" fill="#7a0019">A</text>
+              <text class="set-label" x="260" y="68" fill="#111">B</text>
+            </svg>
+            <figcaption><span>2. expression:</span><span class="expression-blank" aria-label="Blank space for a set expression"></span></figcaption>
+          </figure>
+
+          <figure class="region-exercise write-step">
+            <svg class="static-venn" viewBox="0 0 360 210" role="img" aria-label="Venn diagram with the region outside both A and B shaded">
+              <defs>
+                <mask id="practiceNeitherMask" maskUnits="userSpaceOnUse" x="10" y="10" width="340" height="190">
+                  <rect x="10" y="10" width="340" height="190" rx="11" fill="white"></rect>
+                  <circle cx="140" cy="110" r="70" fill="black"></circle>
+                  <circle cx="220" cy="110" r="70" fill="black"></circle>
+                </mask>
+              </defs>
+              <rect class="universe" x="10" y="10" width="340" height="190" rx="11"></rect>
+              <rect class="region-fill" x="10" y="10" width="340" height="190" rx="11" mask="url(#practiceNeitherMask)"></rect>
+              <circle class="set-outline set-a-outline" cx="140" cy="110" r="70"></circle>
+              <circle class="set-outline set-b-outline" cx="220" cy="110" r="70"></circle>
+              <text class="omega-label" x="22" y="38">&Omega;</text>
+              <text class="set-label" x="88" y="68" fill="#7a0019">A</text>
+              <text class="set-label" x="260" y="68" fill="#111">B</text>
+            </svg>
+            <figcaption><span>3. expression:</span><span class="expression-blank" aria-label="Blank space for a set expression"></span></figcaption>
+          </figure>
+
+          <figure class="region-exercise write-step">
+            <svg class="static-venn" viewBox="0 0 360 210" role="img" aria-label="Venn diagram with the nonoverlapping parts of A and B shaded">
+              <defs>
+                <mask id="practiceExactlyOneAMask" maskUnits="userSpaceOnUse" x="10" y="10" width="340" height="190">
+                  <rect x="10" y="10" width="340" height="190" fill="black"></rect>
+                  <circle cx="140" cy="110" r="70" fill="white"></circle>
+                  <circle cx="220" cy="110" r="70" fill="black"></circle>
+                </mask>
+                <mask id="practiceExactlyOneBMask" maskUnits="userSpaceOnUse" x="10" y="10" width="340" height="190">
+                  <rect x="10" y="10" width="340" height="190" fill="black"></rect>
+                  <circle cx="220" cy="110" r="70" fill="white"></circle>
+                  <circle cx="140" cy="110" r="70" fill="black"></circle>
+                </mask>
+              </defs>
+              <rect class="universe" x="10" y="10" width="340" height="190" rx="11"></rect>
+              <rect class="region-fill" x="10" y="10" width="340" height="190" mask="url(#practiceExactlyOneAMask)"></rect>
+              <rect class="region-fill" x="10" y="10" width="340" height="190" mask="url(#practiceExactlyOneBMask)"></rect>
+              <circle class="set-outline set-a-outline" cx="140" cy="110" r="70"></circle>
+              <circle class="set-outline set-b-outline" cx="220" cy="110" r="70"></circle>
+              <text class="omega-label" x="22" y="38">&Omega;</text>
+              <text class="set-label" x="88" y="68" fill="#7a0019">A</text>
+              <text class="set-label" x="260" y="68" fill="#111">B</text>
+            </svg>
+            <figcaption><span>4. expression:</span><span class="expression-blank" aria-label="Blank space for a set expression"></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="scratch-section" id="language" data-section>
+      <span class="margin-number" aria-hidden="true">05</span>
+      <h2 class="write-step">Translating words into set notation</h2>
+      <p class="ink-line write-step">Most probability mistakes happen before the arithmetic: the event was translated incorrectly.</p>
+      <div class="translation-list">
+        <div class="translation-row write-step"><span>at least one of <i>A</i>, <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+        <div class="translation-row write-step"><span>both <i>A</i> and <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+        <div class="translation-row write-step"><span>neither <i>A</i> nor <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+        <div class="translation-row write-step"><span><i>A</i>, but not <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+        <div class="translation-row write-step"><span>exactly one of <i>A</i>, <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+        <div class="translation-row write-step"><span>not both <i>A</i> and <i>B</i></span><span class="diagram-blank" aria-label="Blank space to draw the corresponding set diagram"></span></div>
+      </div>
+      <p class="ink-line maroon write-step"><span class="underlined">“Neither” and “not both” are different.</span></p>
+      <aside class="side-note write-step">Say the event aloud, then shade the corresponding region.</aside>
+    </section>
+
+    <section class="scratch-section" id="demorgan" data-section>
+      <span class="margin-number" aria-hidden="true">06</span>
+      <h2 class="write-step">De Morgan’s laws</h2>
+      <p class="ink-line write-step">To negate “or,” every alternative must fail. To negate “and,” at least one condition must fail.</p>
+      <p class="math-line center write-step">(<i>A</i> &cup; <i>B</i>)<sup>c</sup> = <i>A</i><sup>c</sup> &cap; <i>B</i><sup>c</sup></p>
+      <p class="math-line center write-step">(<i>A</i> &cap; <i>B</i>)<sup>c</sup> = <i>A</i><sup>c</sup> &cup; <i>B</i><sup>c</sup></p>
+
+      <div class="demorgan-diagrams">
+        <figure class="demorgan-law-card write-step">
+          <figcaption>Negating “or”: both diagrams shade the outcomes in neither event.</figcaption>
+          <div class="diagram-equivalence">
+            <div class="demorgan-panel">
+              <svg class="static-venn" viewBox="0 0 300 180" role="img" aria-label="The complement of the union of A and B; only the region outside both circles is shaded">
+                <defs>
+                  <mask id="dmNegateUnionLeft" maskUnits="userSpaceOnUse" x="8" y="8" width="284" height="164">
+                    <rect x="8" y="8" width="284" height="164" rx="10" fill="white"></rect>
+                    <circle cx="120" cy="95" r="58" fill="black"></circle>
+                    <circle cx="180" cy="95" r="58" fill="black"></circle>
+                  </mask>
+                </defs>
+                <rect class="universe" x="8" y="8" width="284" height="164" rx="10"></rect>
+                <rect class="region-fill" x="8" y="8" width="284" height="164" rx="10" mask="url(#dmNegateUnionLeft)"></rect>
+                <circle class="set-outline set-a-outline" cx="120" cy="95" r="58"></circle>
+                <circle class="set-outline set-b-outline" cx="180" cy="95" r="58"></circle>
+                <text class="omega-label" x="18" y="31">&Omega;</text>
+                <text class="set-label" x="76" y="62" fill="#7a0019">A</text>
+                <text class="set-label" x="213" y="62" fill="#111">B</text>
+              </svg>
+              <strong>(<i>A</i> &cup; <i>B</i>)<sup>c</sup></strong>
+            </div>
+            <span class="diagram-equals" aria-hidden="true">=</span>
+            <div class="demorgan-panel">
+              <svg class="static-venn" viewBox="0 0 300 180" role="img" aria-label="The intersection of the complements of A and B; only the region outside both circles is shaded">
+                <defs>
+                  <mask id="dmNegateUnionRight" maskUnits="userSpaceOnUse" x="8" y="8" width="284" height="164">
+                    <rect x="8" y="8" width="284" height="164" rx="10" fill="white"></rect>
+                    <circle cx="120" cy="95" r="58" fill="black"></circle>
+                    <circle cx="180" cy="95" r="58" fill="black"></circle>
+                  </mask>
+                </defs>
+                <rect class="universe" x="8" y="8" width="284" height="164" rx="10"></rect>
+                <rect class="region-fill" x="8" y="8" width="284" height="164" rx="10" mask="url(#dmNegateUnionRight)"></rect>
+                <circle class="set-outline set-a-outline" cx="120" cy="95" r="58"></circle>
+                <circle class="set-outline set-b-outline" cx="180" cy="95" r="58"></circle>
+                <text class="omega-label" x="18" y="31">&Omega;</text>
+                <text class="set-label" x="76" y="62" fill="#7a0019">A</text>
+                <text class="set-label" x="213" y="62" fill="#111">B</text>
+              </svg>
+              <strong><i>A</i><sup>c</sup> &cap; <i>B</i><sup>c</sup></strong>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="demorgan-law-card write-step">
+          <figcaption>Negating “and”: both diagrams shade everything except the overlap.</figcaption>
+          <div class="diagram-equivalence">
+            <div class="demorgan-panel">
+              <svg class="static-venn" viewBox="0 0 300 180" role="img" aria-label="The complement of the intersection of A and B; everything except the overlap is shaded">
+                <defs>
+                  <clipPath id="dmIntersectionLeftClip"><circle cx="180" cy="95" r="58"></circle></clipPath>
+                  <mask id="dmNegateIntersectionLeft" maskUnits="userSpaceOnUse" x="8" y="8" width="284" height="164">
+                    <rect x="8" y="8" width="284" height="164" rx="10" fill="white"></rect>
+                    <circle cx="120" cy="95" r="58" fill="black" clip-path="url(#dmIntersectionLeftClip)"></circle>
+                  </mask>
+                </defs>
+                <rect class="universe" x="8" y="8" width="284" height="164" rx="10"></rect>
+                <rect class="region-fill" x="8" y="8" width="284" height="164" rx="10" mask="url(#dmNegateIntersectionLeft)"></rect>
+                <circle class="set-outline set-a-outline" cx="120" cy="95" r="58"></circle>
+                <circle class="set-outline set-b-outline" cx="180" cy="95" r="58"></circle>
+                <text class="omega-label" x="18" y="31">&Omega;</text>
+                <text class="set-label" x="76" y="62" fill="#7a0019">A</text>
+                <text class="set-label" x="213" y="62" fill="#111">B</text>
+              </svg>
+              <strong>(<i>A</i> &cap; <i>B</i>)<sup>c</sup></strong>
+            </div>
+            <span class="diagram-equals" aria-hidden="true">=</span>
+            <div class="demorgan-panel">
+              <svg class="static-venn" viewBox="0 0 300 180" role="img" aria-label="The union of the complements of A and B; everything except the overlap is shaded">
+                <defs>
+                  <clipPath id="dmIntersectionRightClip"><circle cx="180" cy="95" r="58"></circle></clipPath>
+                  <mask id="dmNegateIntersectionRight" maskUnits="userSpaceOnUse" x="8" y="8" width="284" height="164">
+                    <rect x="8" y="8" width="284" height="164" rx="10" fill="white"></rect>
+                    <circle cx="120" cy="95" r="58" fill="black" clip-path="url(#dmIntersectionRightClip)"></circle>
+                  </mask>
+                </defs>
+                <rect class="universe" x="8" y="8" width="284" height="164" rx="10"></rect>
+                <rect class="region-fill" x="8" y="8" width="284" height="164" rx="10" mask="url(#dmNegateIntersectionRight)"></rect>
+                <circle class="set-outline set-a-outline" cx="120" cy="95" r="58"></circle>
+                <circle class="set-outline set-b-outline" cx="180" cy="95" r="58"></circle>
+                <text class="omega-label" x="18" y="31">&Omega;</text>
+                <text class="set-label" x="76" y="62" fill="#7a0019">A</text>
+                <text class="set-label" x="213" y="62" fill="#111">B</text>
+              </svg>
+              <strong><i>A</i><sup>c</sup> &cup; <i>B</i><sup>c</sup></strong>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <p class="ink-line maroon write-step">Proof of the first law: choose an arbitrary outcome <i>&omega;</i>.</p>
+      <div class="proof-chain">
+        <div class="proof-row write-step"><span class="statement"><i>&omega;</i> &isin; (<i>A</i> &cup; <i>B</i>)<sup>c</sup></span><span class="reason">start on the left</span></div>
+        <div class="proof-row write-step"><span class="statement">&Longleftrightarrow; <i>&omega;</i> &notin; <i>A</i> &cup; <i>B</i></span><span class="reason">definition of complement</span></div>
+        <div class="proof-row write-step"><span class="statement">&Longleftrightarrow; not(<i>&omega;</i> &isin; <i>A</i> or <i>&omega;</i> &isin; <i>B</i>)</span><span class="reason">definition of union</span></div>
+        <div class="proof-row write-step"><span class="statement">&Longleftrightarrow; <i>&omega;</i> &notin; <i>A</i> and <i>&omega;</i> &notin; <i>B</i></span><span class="reason">ordinary logic</span></div>
+        <div class="proof-row write-step"><span class="statement">&Longleftrightarrow; <i>&omega;</i> &isin; <i>A</i><sup>c</sup> and <i>&omega;</i> &isin; <i>B</i><sup>c</sup></span><span class="reason">definition of complement</span></div>
+        <div class="proof-row write-step"><span class="statement">&Longleftrightarrow; <i>&omega;</i> &isin; <i>A</i><sup>c</sup> &cap; <i>B</i><sup>c</sup></span><span class="reason">definition of intersection</span></div>
+      </div>
+      <p class="ink-line green write-step">The arbitrary outcome belongs to the left set exactly when it belongs to the right set. Therefore the sets are equal.</p>
+
+      <div class="set-proof-recipe">
+        <h3 class="write-step">A general recipe for set proofs</h3>
+        <ol>
+          <li class="write-step">Choose an arbitrary outcome <i>&omega;</i> from the sample space &Omega;.</li>
+          <li class="write-step">Write what it means for <i>&omega;</i> to belong to the set on the left.</li>
+          <li class="write-step">Translate set membership into logic: union means “or,” intersection means “and,” and complement means “not.”</li>
+          <li class="write-step">Simplify the logical statement, then translate it back into set membership on the right.</li>
+          <li class="write-step">Because <i>&omega;</i> was arbitrary, conclude that the relationship holds for every outcome.</li>
+        </ol>
+        <p class="math-line compact write-step">To prove equality: &emsp; <i>&omega;</i> &isin; LHS &nbsp;&Longleftrightarrow;&nbsp; <i>&omega;</i> &isin; RHS.</p>
+        <p class="math-line compact write-step">To prove inclusion: &emsp; assume <i>&omega;</i> &isin; <i>A</i>, then show <i>&omega;</i> &isin; <i>B</i>.</p>
+      </div>
+    </section>
+
+    <section class="scratch-section" id="partitions" data-section>
+      <span class="margin-number" aria-hidden="true">07</span>
+      <h2 class="write-step">Disjoint events and partitions</h2>
+      <p class="math-line write-step"><i>A</i> and <i>B</i> are <span class="underlined">disjoint</span> &nbsp;&Longleftrightarrow;&nbsp; <i>A</i> &cap; <i>B</i> = &empty;.</p>
+      <p class="ink-line write-step">Our events “even” and “at least 4” are not disjoint: their overlap is {4, 6}.</p>
+      <p class="ink-line blue write-step">A partition cuts &Omega; into nonempty pieces with no overlaps and no gaps.</p>
+      <div class="partition-line write-step" role="img" aria-label="A partition of the die sample space into results congruent to zero, one, and two modulo three">
+        <div class="partition-cell">{3, 6}</div>
+        <div class="partition-cell">{1, 4}</div>
+        <div class="partition-cell">{2, 5}</div>
+      </div>
+      <p class="math-line compact write-step"><i>C</i><sub>1</sub>, &hellip;, <i>C</i><sub>k</sub> partition &Omega; when</p>
+      <div class="partition-conditions">
+        <p class="math-line compact write-step"><i>C</i><sub>i</sub> &ne; &empty; &emsp; for every <i>i</i>;</p>
+        <p class="math-line compact write-step"><i>C</i><sub>i</sub> &cap; <i>C</i><sub>j</sub> = &empty; &emsp; when <i>i</i> &ne; <i>j</i>;</p>
+        <p class="math-line compact write-step">&bigcup;<sub>i=1</sub><sup>k</sup> <i>C</i><sub>i</sub> = &Omega;.</p>
+      </div>
+      <p class="ink-line write-step">Exactly one partition event occurs for every outcome.</p>
+      <aside class="side-note write-step">Partitions will later let us break a hard probability into simpler conditional pieces.</aside>
+    </section>
+
+    <section class="scratch-section" id="representations" data-section>
+      <span class="margin-number" aria-hidden="true">08</span>
+      <h2 class="write-step">Three ways to describe the same event</h2>
+      <p class="ink-line write-step">Set notation, words, and a shaded diagram are three representations of the same collection of outcomes.</p>
+      <div class="representation-grid" role="table" aria-label="Connections among set notation, event descriptions, and Venn diagrams">
+          <div class="representation-header write-step" role="row">
+            <span role="columnheader">set notation</span>
+            <span role="columnheader">event in words</span>
+            <span role="columnheader">Venn diagram</span>
+          </div>
+
+          <div class="representation-row write-step" role="row">
+            <div class="representation-notation" role="cell"><i>A</i> &cup; <i>B</i></div>
+            <div class="representation-words" role="cell"><i>A</i> occurs or <i>B</i> occurs, or both.</div>
+            <figure class="representation-diagram" role="cell">
+              <svg class="static-venn" viewBox="0 0 260 150" role="img" aria-label="Both circles A and B are shaded">
+                <rect class="universe" x="6" y="6" width="248" height="138" rx="9"></rect>
+                <circle class="region-fill" cx="104" cy="80" r="48"></circle>
+                <circle class="region-fill" cx="156" cy="80" r="48"></circle>
+                <circle class="set-outline set-a-outline" cx="104" cy="80" r="48"></circle>
+                <circle class="set-outline set-b-outline" cx="156" cy="80" r="48"></circle>
+                <text class="omega-label" x="15" y="25">&Omega;</text>
+                <text class="set-label" x="67" y="52" fill="#7a0019">A</text>
+                <text class="set-label" x="184" y="52" fill="#111">B</text>
+              </svg>
+            </figure>
+          </div>
+
+          <div class="representation-row write-step" role="row">
+            <div class="representation-notation" role="cell"><i>A</i> &cap; <i>B</i></div>
+            <div class="representation-words" role="cell">Both <i>A</i> and <i>B</i> occur.</div>
+            <figure class="representation-diagram" role="cell">
+              <svg class="static-venn" viewBox="0 0 260 150" role="img" aria-label="Only the overlap of circles A and B is shaded">
+                <defs>
+                  <clipPath id="bridgeIntersectionClip"><circle cx="156" cy="80" r="48"></circle></clipPath>
+                </defs>
+                <rect class="universe" x="6" y="6" width="248" height="138" rx="9"></rect>
+                <circle class="region-fill" cx="104" cy="80" r="48" clip-path="url(#bridgeIntersectionClip)"></circle>
+                <circle class="set-outline set-a-outline" cx="104" cy="80" r="48"></circle>
+                <circle class="set-outline set-b-outline" cx="156" cy="80" r="48"></circle>
+                <text class="omega-label" x="15" y="25">&Omega;</text>
+                <text class="set-label" x="67" y="52" fill="#7a0019">A</text>
+                <text class="set-label" x="184" y="52" fill="#111">B</text>
+              </svg>
+            </figure>
+          </div>
+
+          <div class="representation-row write-step" role="row">
+            <div class="representation-notation" role="cell"><i>A</i><sup>c</sup></div>
+            <div class="representation-words" role="cell"><i>A</i> does not occur.</div>
+            <figure class="representation-diagram" role="cell">
+              <svg class="static-venn" viewBox="0 0 260 150" role="img" aria-label="Everything in the sample space outside circle A is shaded">
+                <defs>
+                  <mask id="bridgeComplementMask" maskUnits="userSpaceOnUse" x="6" y="6" width="248" height="138">
+                    <rect x="6" y="6" width="248" height="138" rx="9" fill="white"></rect>
+                    <circle cx="104" cy="80" r="48" fill="black"></circle>
+                  </mask>
+                </defs>
+                <rect class="universe" x="6" y="6" width="248" height="138" rx="9"></rect>
+                <rect class="region-fill" x="6" y="6" width="248" height="138" rx="9" mask="url(#bridgeComplementMask)"></rect>
+                <circle class="set-outline set-a-outline" cx="104" cy="80" r="48"></circle>
+                <circle class="set-outline set-b-outline" cx="156" cy="80" r="48"></circle>
+                <text class="omega-label" x="15" y="25">&Omega;</text>
+                <text class="set-label" x="67" y="52" fill="#7a0019">A</text>
+                <text class="set-label" x="184" y="52" fill="#111">B</text>
+              </svg>
+            </figure>
+          </div>
+      </div>
+    </section>
+
+    <section class="scratch-section" id="probability" data-section>
+      <span class="margin-number" aria-hidden="true">09</span>
+      <h2 class="write-step">Preview: connecting set operations to probability</h2>
+      <p class="ink-line maroon write-step">Next lecture begins probability. Here is a first look at how set relationships control probability calculations.</p>
+      <p class="ink-line write-step">Roll a fair six-sided die once and record the number on its upper face.</p>
+      <div class="experiment-strip write-step" aria-label="Sample space and events for the probability preview">
+        <div><strong>sample space</strong><span>&Omega; = {1, 2, 3, 4, 5, 6}</span></div>
+        <div><strong>event A: even</strong><span><i>A</i> = {2, 4, 6}</span></div>
+        <div><strong>event B: at least 4</strong><span><i>B</i> = {4, 5, 6}</span></div>
+      </div>
+      <p class="math-line center write-step"><i>P</i>(<i>A</i><sup>c</sup>) = 1 - <i>P</i>(<i>A</i>)</p>
+      <p class="math-line center write-step"><i>P</i>(<i>A</i> &cup; <i>B</i>) = <i>P</i>(<i>A</i>) + <i>P</i>(<i>B</i>) - <i>P</i>(<i>A</i> &cap; <i>B</i>)</p>
+      <p class="ink-line maroon write-step">Why subtract the intersection?</p>
+      <p class="ink-line write-step">Because adding <i>P</i>(<i>A</i>) and <i>P</i>(<i>B</i>) counts outcomes in the overlap twice.</p>
+      <div class="derivation">
+        <p class="math-line compact write-step"><i>P</i>(<i>A</i>) = 3/6, &emsp; <i>P</i>(<i>B</i>) = 3/6, &emsp; <i>P</i>(<i>A</i> &cap; <i>B</i>) = 2/6</p>
+        <p class="math-line compact write-step"><i>P</i>(<i>A</i> &cup; <i>B</i>) = 3/6 + 3/6 - 2/6 = 4/6.</p>
+      </div>
+      <p class="ink-line blue write-step">Check directly: <i>A</i> &cup; <i>B</i> = {2, 4, 5, 6}, four of the six equally likely outcomes.</p>
+      <p class="math-line center write-step">If <i>A</i> &cap; <i>B</i> = &empty;, then <i>P</i>(<i>A</i> &cup; <i>B</i>) = <i>P</i>(<i>A</i>) + <i>P</i>(<i>B</i>).</p>
+    </section>
+
+    <section class="scratch-section" id="wrap" data-section>
+      <span class="margin-number" aria-hidden="true">10</span>
+      <h2 class="write-step">What we covered</h2>
+      <ul class="set-list">
+        <li class="write-step">Sample spaces and events</li>
+        <li class="write-step">Union, intersection, and complement</li>
+        <li class="write-step">Translating among words, set notation, and Venn diagrams</li>
+        <li class="write-step">De Morgan’s laws and element-based proofs of set identities</li>
+        <li class="write-step">Disjoint events and partitions of &Omega;</li>
+        <li class="write-step">A preview of set operations in probability calculations</li>
+      </ul>
+    </section>
+  </main>
+
+  <script id="embeddedInkData" type="application/json">{"updatedAt":0,"strokes":[]}</script>
+  <script>
+    (() => {
+      const paper = document.getElementById('lecturePaper');
+      const steps = Array.from(paper.querySelectorAll('.write-step:not(.is-anchor)'));
+      const nextButton = document.getElementById('revealNext');
+      const undoButton = document.getElementById('undoStep');
+      const showAllButton = document.getElementById('showAll');
+      const resetButton = document.getElementById('resetLecture');
+      const progressLabel = document.getElementById('progressLabel');
+      const progressBar = document.getElementById('progressBar');
+      let visibleCount = steps.filter((step) => step.classList.contains('is-visible')).length;
+
+      function setStepVisibility(index, visible) {
+        const step = steps[index];
+        if (!step) return;
+        step.classList.toggle('is-visible', visible);
+        step.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      }
+
+      function updateProgress() {
+        const percentage = steps.length ? (visibleCount / steps.length) * 100 : 0;
+        progressLabel.textContent = `${visibleCount} / ${steps.length}`;
+        progressBar.style.width = `${percentage}%`;
+        nextButton.disabled = visibleCount >= steps.length;
+        undoButton.disabled = visibleCount <= 0;
+      }
+
+      function revealNext({ scroll = true } = {}) {
+        if (visibleCount >= steps.length) return;
+        const step = steps[visibleCount];
+        setStepVisibility(visibleCount, true);
+        visibleCount += 1;
+        updateProgress();
+        if (scroll) {
+          const rect = step.getBoundingClientRect();
+          const safeTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--toolbar-height')) + 28;
+          if (rect.bottom > window.innerHeight - 64 || rect.top < safeTop) {
+            step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+
+      function undoStep() {
+        if (visibleCount <= 0) return;
+        visibleCount -= 1;
+        const step = steps[visibleCount];
+        setStepVisibility(visibleCount, false);
+        updateProgress();
+        step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      function showAll() {
+        steps.forEach((_, index) => setStepVisibility(index, true));
+        visibleCount = steps.length;
+        updateProgress();
+      }
+
+      function resetLecture() {
+        steps.forEach((_, index) => setStepVisibility(index, false));
+        visibleCount = 0;
+        updateProgress();
+        document.getElementById('start').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      steps.forEach((step, index) => {
+        const visible = index < visibleCount;
+        step.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      });
+
+      nextButton.addEventListener('click', () => revealNext());
+      undoButton.addEventListener('click', undoStep);
+      showAllButton.addEventListener('click', showAll);
+      resetButton.addEventListener('click', resetLecture);
+
+      document.addEventListener('keydown', (event) => {
+        const target = event.target;
+        const isControl = target instanceof HTMLButtonElement || target instanceof HTMLAnchorElement || target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+        if (isControl) return;
+        if (event.key === ' ' || event.key === 'ArrowRight') {
+          event.preventDefault();
+          revealNext();
+        } else if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          undoStep();
+        }
+      });
+
+      const sectionLinks = Array.from(document.querySelectorAll('.section-jumps a'));
+      const sections = Array.from(document.querySelectorAll('[data-section]'));
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        sectionLinks.forEach((link) => link.classList.toggle('is-current', link.getAttribute('href') === `#${visible.target.id}`));
+      }, { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.1, 0.4] });
+      sections.forEach((section) => observer.observe(section));
+
+      const inkCanvas = document.getElementById('inkCanvas');
+      const inkContext = inkCanvas.getContext('2d');
+      const inkModeButtons = Array.from(document.querySelectorAll('[data-ink-mode]'));
+      const inkToolButtons = Array.from(document.querySelectorAll('[data-ink-tool]'));
+      const inkColorButtons = Array.from(document.querySelectorAll('[data-ink-color]'));
+      const inkUndoButton = document.getElementById('inkUndo');
+      const inkRedoButton = document.getElementById('inkRedo');
+      const inkClearButton = document.getElementById('inkClearSection');
+      const inkSaveButton = document.getElementById('inkSaveCopy');
+      const inkSavePdfButton = document.getElementById('inkSavePdf');
+      const inkStatus = document.getElementById('inkStatus');
+      const embeddedInkData = document.getElementById('embeddedInkData');
+      const inkStorageKey = 'stat5101-lecture02-set-operations-ink-v1';
+      const validSectionIds = new Set(sections.map((section) => section.id));
+      const validInkTools = new Set(['pen', 'highlighter', 'eraser']);
+      const validInkColors = new Set(['#111111', '#7a0019']);
+      let inkMode = 'navigate';
+      let inkTool = 'pen';
+      let inkColor = '#111111';
+      let inkStrokes = [];
+      let activeStroke = null;
+      let activePointerId = null;
+      let inkUndoStack = [];
+      let inkRedoStack = [];
+      let renderRequested = false;
+      let inkPixelRatio = 1;
+      let printPrepared = false;
+
+      function parseInkPayload(value) {
+        try {
+          const payload = typeof value === 'string' ? JSON.parse(value) : value;
+          if (!payload || !Array.isArray(payload.strokes)) return null;
+          const strokes = payload.strokes.filter((stroke) => {
+            if (!stroke || !validSectionIds.has(stroke.sectionId) || !validInkTools.has(stroke.tool) || !Array.isArray(stroke.points)) return false;
+            if (stroke.tool !== 'eraser' && !validInkColors.has(stroke.color)) return false;
+            return stroke.points.every((point) => Number.isFinite(point.x) && Number.isFinite(point.y) && Number.isFinite(point.p));
+          });
+          return { updatedAt: Number(payload.updatedAt) || 0, strokes };
+        } catch (_) {
+          return null;
+        }
+      }
+
+      function loadInk() {
+        const embedded = parseInkPayload(embeddedInkData.textContent) || { updatedAt: 0, strokes: [] };
+        let local = null;
+        try { local = parseInkPayload(localStorage.getItem(inkStorageKey)); } catch (_) { local = null; }
+        const selected = local && local.updatedAt > embedded.updatedAt ? local : embedded;
+        inkStrokes = selected.strokes;
+      }
+
+      function currentInkPayload() {
+        return { updatedAt: Date.now(), strokes: inkStrokes };
+      }
+
+      function saveInkLocally() {
+        try {
+          localStorage.setItem(inkStorageKey, JSON.stringify(currentInkPayload()));
+          inkStatus.textContent = inkMode === 'write' ? 'Writing mode · ink saved on this device' : 'Navigate mode · ink saved on this device';
+        } catch (_) {
+          inkStatus.textContent = 'Ink is visible, but browser autosave is unavailable. Use Save annotated HTML.';
+        }
+      }
+
+      function sectionAtPoint(clientX, clientY) {
+        const paperRect = paper.getBoundingClientRect();
+        if (clientX < paperRect.left || clientX > paperRect.right) return null;
+        return sections.find((section) => {
+          const rect = section.getBoundingClientRect();
+          return clientY >= rect.top && clientY <= rect.bottom;
+        }) || null;
+      }
+
+      function currentSection() {
+        const toolbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--toolbar-height')) || 64;
+        const targetY = toolbarHeight + (window.innerHeight - toolbarHeight) * 0.42;
+        return sections.find((section) => {
+          const rect = section.getBoundingClientRect();
+          return targetY >= rect.top && targetY <= rect.bottom;
+        }) || sections.reduce((closest, section) => {
+          const distance = Math.abs(section.getBoundingClientRect().top - targetY);
+          return !closest || distance < closest.distance ? { section, distance } : closest;
+        }, null)?.section || null;
+      }
+
+      function normalizedPoint(event, section) {
+        const rect = section.getBoundingClientRect();
+        const pressure = event.pressure > 0 ? event.pressure : 0.5;
+        return {
+          x: Math.max(-0.02, Math.min(1.02, (event.clientX - rect.left) / rect.width)),
+          y: Math.max(-0.02, Math.min(1.02, (event.clientY - rect.top) / rect.height)),
+          p: Math.max(0.05, Math.min(1, pressure))
+        };
+      }
+
+      function clientPoint(point, rect) {
+        return { x: rect.left + point.x * rect.width, y: rect.top + point.y * rect.height };
+      }
+
+      function drawStroke(stroke) {
+        const section = document.getElementById(stroke.sectionId);
+        if (!section || !stroke.points.length) return;
+        const rect = section.getBoundingClientRect();
+        if (rect.bottom < -80 || rect.top > window.innerHeight + 80) return;
+        const scale = Math.max(0.55, Math.min(1.8, rect.width / (stroke.referenceWidth || rect.width)));
+        const points = stroke.points;
+        inkContext.save();
+        inkContext.lineCap = 'round';
+        inkContext.lineJoin = 'round';
+        inkContext.strokeStyle = stroke.color || '#111111';
+        inkContext.fillStyle = stroke.color || '#111111';
+        inkContext.globalCompositeOperation = stroke.tool === 'eraser' ? 'destination-out' : 'source-over';
+        inkContext.globalAlpha = stroke.tool === 'highlighter' ? 0.2 : 0.96;
+
+        if (points.length === 1) {
+          const point = clientPoint(points[0], rect);
+          const width = (stroke.baseWidth || 4) * scale * (stroke.tool === 'pen' ? 0.58 + points[0].p * 0.84 : 1);
+          inkContext.beginPath();
+          inkContext.arc(point.x, point.y, width / 2, 0, Math.PI * 2);
+          inkContext.fill();
+        } else if (stroke.tool === 'pen') {
+          for (let index = 1; index < points.length; index += 1) {
+            const previous = clientPoint(points[index - 1], rect);
+            const point = clientPoint(points[index], rect);
+            const pressure = (points[index - 1].p + points[index].p) / 2;
+            const width = (stroke.baseWidth || 4) * scale * (stroke.tool === 'pen' ? 0.58 + pressure * 0.84 : 1);
+            inkContext.lineWidth = width;
+            inkContext.beginPath();
+            inkContext.moveTo(previous.x, previous.y);
+            inkContext.lineTo(point.x, point.y);
+            inkContext.stroke();
+          }
+        } else {
+          const first = clientPoint(points[0], rect);
+          inkContext.lineWidth = (stroke.baseWidth || 24) * scale;
+          inkContext.beginPath();
+          inkContext.moveTo(first.x, first.y);
+          for (let index = 1; index < points.length; index += 1) {
+            const point = clientPoint(points[index], rect);
+            inkContext.lineTo(point.x, point.y);
+          }
+          inkContext.stroke();
+        }
+        inkContext.restore();
+      }
+
+      function renderInk() {
+        renderRequested = false;
+        inkContext.setTransform(inkPixelRatio, 0, 0, inkPixelRatio, 0, 0);
+        inkContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        inkStrokes.forEach(drawStroke);
+        if (activeStroke) drawStroke(activeStroke);
+      }
+
+      function requestInkRender() {
+        if (renderRequested) return;
+        renderRequested = true;
+        requestAnimationFrame(renderInk);
+      }
+
+      function resizeInkCanvas() {
+        inkPixelRatio = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+        const width = Math.round(window.innerWidth * inkPixelRatio);
+        const height = Math.round(window.innerHeight * inkPixelRatio);
+        if (inkCanvas.width !== width || inkCanvas.height !== height) {
+          inkCanvas.width = width;
+          inkCanvas.height = height;
+        }
+        requestInkRender();
+      }
+
+      function updateInkControls() {
+        inkUndoButton.disabled = inkUndoStack.length === 0;
+        inkRedoButton.disabled = inkRedoStack.length === 0;
+        const section = currentSection();
+        inkClearButton.disabled = !section || !inkStrokes.some((stroke) => stroke.sectionId === section.id);
+        inkModeButtons.forEach((button) => button.setAttribute('aria-pressed', button.dataset.inkMode === inkMode ? 'true' : 'false'));
+        inkToolButtons.forEach((button) => button.setAttribute('aria-pressed', button.dataset.inkTool === inkTool ? 'true' : 'false'));
+        inkColorButtons.forEach((button) => button.setAttribute('aria-pressed', button.dataset.inkColor === inkColor ? 'true' : 'false'));
+      }
+
+      function setInkMode(mode) {
+        inkMode = mode === 'write' ? 'write' : 'navigate';
+        if (inkMode === 'navigate' && activeStroke) finishInkStroke();
+        inkCanvas.classList.toggle('is-active', inkMode === 'write');
+        document.body.classList.toggle('is-inking', inkMode === 'write');
+        inkStatus.textContent = inkMode === 'write'
+          ? 'Writing mode · Apple Pencil or mouse writes; touch is ignored'
+          : 'Navigate mode · scroll and use lecture controls';
+        updateInkControls();
+      }
+
+      function commitInkAction(action) {
+        inkUndoStack.push(action);
+        inkRedoStack = [];
+        saveInkLocally();
+        requestInkRender();
+        updateInkControls();
+      }
+
+      function appendInkPoints(event) {
+        if (!activeStroke) return;
+        const section = document.getElementById(activeStroke.sectionId);
+        if (!section) return;
+        const samples = typeof event.getCoalescedEvents === 'function' ? event.getCoalescedEvents() : [];
+        const events = samples.length ? samples : [event];
+        events.forEach((sample) => {
+          const point = normalizedPoint(sample, section);
+          const previous = activeStroke.points[activeStroke.points.length - 1];
+          const rect = section.getBoundingClientRect();
+          const distance = previous ? Math.hypot((point.x - previous.x) * rect.width, (point.y - previous.y) * rect.height) : Infinity;
+          if (!previous || distance >= 0.7) activeStroke.points.push(point);
+        });
+        requestInkRender();
+      }
+
+      function beginInkStroke(event) {
+        if (inkMode !== 'write' || activePointerId !== null || event.button > 0) return;
+        if (event.pointerType === 'touch') {
+          inkStatus.textContent = 'Touch is ignored to prevent palm marks. Use Apple Pencil, or switch to Navigate to scroll.';
+          return;
+        }
+        const section = sectionAtPoint(event.clientX, event.clientY);
+        if (!section) return;
+        const rect = section.getBoundingClientRect();
+        activePointerId = event.pointerId;
+        activeStroke = {
+          id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
+          sectionId: section.id,
+          tool: inkTool,
+          color: inkTool === 'eraser' ? '#111111' : inkColor,
+          baseWidth: inkTool === 'highlighter' ? 24 : inkTool === 'eraser' ? 34 : 4.2,
+          referenceWidth: rect.width,
+          points: []
+        };
+        try { inkCanvas.setPointerCapture(event.pointerId); } catch (_) { /* capture is optional */ }
+        appendInkPoints(event);
+        event.preventDefault();
+      }
+
+      function moveInkStroke(event) {
+        if (event.pointerId !== activePointerId || !activeStroke) return;
+        appendInkPoints(event);
+        event.preventDefault();
+      }
+
+      function finishInkStroke(event) {
+        if (event && event.pointerId !== activePointerId) return;
+        if (!activeStroke) {
+          activePointerId = null;
+          return;
+        }
+        if (event) appendInkPoints(event);
+        const finished = activeStroke;
+        activeStroke = null;
+        activePointerId = null;
+        if (finished.points.length) {
+          inkStrokes.push(finished);
+          commitInkAction({ type: 'add', stroke: finished });
+        } else {
+          requestInkRender();
+        }
+      }
+
+      function undoInk() {
+        const action = inkUndoStack.pop();
+        if (!action) return;
+        if (action.type === 'add') {
+          inkStrokes = inkStrokes.filter((stroke) => stroke.id !== action.stroke.id);
+        } else if (action.type === 'clear') {
+          action.removed.slice().sort((a, b) => a.index - b.index).forEach(({ index, stroke }) => {
+            inkStrokes.splice(Math.min(index, inkStrokes.length), 0, stroke);
+          });
+        }
+        inkRedoStack.push(action);
+        saveInkLocally();
+        requestInkRender();
+        updateInkControls();
+      }
+
+      function redoInk() {
+        const action = inkRedoStack.pop();
+        if (!action) return;
+        if (action.type === 'add') {
+          inkStrokes.push(action.stroke);
+        } else if (action.type === 'clear') {
+          const removedIds = new Set(action.removed.map(({ stroke }) => stroke.id));
+          inkStrokes = inkStrokes.filter((stroke) => !removedIds.has(stroke.id));
+        }
+        inkUndoStack.push(action);
+        saveInkLocally();
+        requestInkRender();
+        updateInkControls();
+      }
+
+      function clearCurrentSectionInk() {
+        const section = currentSection();
+        if (!section) return;
+        const removed = [];
+        inkStrokes.forEach((stroke, index) => {
+          if (stroke.sectionId === section.id) removed.push({ index, stroke });
+        });
+        if (!removed.length) {
+          inkStatus.textContent = 'There is no ink in the current section.';
+          return;
+        }
+        const removedIds = new Set(removed.map(({ stroke }) => stroke.id));
+        inkStrokes = inkStrokes.filter((stroke) => !removedIds.has(stroke.id));
+        commitInkAction({ type: 'clear', removed, sectionId: section.id });
+        inkStatus.textContent = `Cleared ink from section ${section.querySelector('.margin-number')?.textContent || ''}. Undo is available.`;
+      }
+
+      async function saveAnnotatedCopy() {
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelector('body')?.classList.remove('is-inking');
+        const clonedCanvas = clone.querySelector('#inkCanvas');
+        clonedCanvas?.classList.remove('is-active');
+        clonedCanvas?.removeAttribute('width');
+        clonedCanvas?.removeAttribute('height');
+        const clonedData = clone.querySelector('#embeddedInkData');
+        const payload = currentInkPayload();
+        if (clonedData) clonedData.textContent = JSON.stringify(payload);
+        const blob = new Blob([`<!doctype html>\n${clone.outerHTML}`], { type: 'text/html;charset=utf-8' });
+        const fileName = 'STAT5101_Lecture02_Set_Operations_Annotated.html';
+
+        if (typeof window.showSaveFilePicker === 'function') {
+          try {
+            const handle = await window.showSaveFilePicker({
+              suggestedName: fileName,
+              types: [{
+                description: 'HTML document',
+                accept: { 'text/html': ['.html'] }
+              }]
+            });
+            const writable = await handle.createWritable();
+            await writable.write(blob);
+            await writable.close();
+            inkStatus.textContent = 'Annotated HTML saved to the selected location.';
+            return;
+          } catch (error) {
+            if (error?.name === 'AbortError') {
+              inkStatus.textContent = 'HTML save canceled.';
+              return;
+            }
+          }
+        }
+
+        const sharedFile = new File([blob], fileName, { type: 'text/html' });
+        if (typeof navigator.share === 'function' && typeof navigator.canShare === 'function') {
+          try {
+            if (navigator.canShare({ files: [sharedFile] })) {
+              await navigator.share({
+                files: [sharedFile],
+                title: 'STAT 5101 · Set Operations'
+              });
+              inkStatus.textContent = 'HTML share sheet closed.';
+              return;
+            }
+          } catch (error) {
+            if (error?.name === 'AbortError') {
+              inkStatus.textContent = 'HTML save canceled.';
+              return;
+            }
+          }
+        }
+
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1500);
+        inkStatus.textContent = 'HTML downloaded. Check the browser’s Downloads folder.';
+      }
+
+      function drawStrokeForPrint(context, stroke, width, height) {
+        if (!stroke.points.length) return;
+        const scale = Math.max(0.55, Math.min(1.8, width / (stroke.referenceWidth || width)));
+        const points = stroke.points;
+        const pointOnPage = (point) => ({ x: point.x * width, y: point.y * height });
+        context.save();
+        context.lineCap = 'round';
+        context.lineJoin = 'round';
+        context.strokeStyle = stroke.color || '#111111';
+        context.fillStyle = stroke.color || '#111111';
+        context.globalCompositeOperation = stroke.tool === 'eraser' ? 'destination-out' : 'source-over';
+        context.globalAlpha = stroke.tool === 'highlighter' ? 0.2 : 0.96;
+
+        if (points.length === 1) {
+          const point = pointOnPage(points[0]);
+          const lineWidth = (stroke.baseWidth || 4) * scale * (stroke.tool === 'pen' ? 0.58 + points[0].p * 0.84 : 1);
+          context.beginPath();
+          context.arc(point.x, point.y, lineWidth / 2, 0, Math.PI * 2);
+          context.fill();
+        } else if (stroke.tool === 'pen') {
+          for (let index = 1; index < points.length; index += 1) {
+            const previous = pointOnPage(points[index - 1]);
+            const point = pointOnPage(points[index]);
+            const pressure = (points[index - 1].p + points[index].p) / 2;
+            context.lineWidth = (stroke.baseWidth || 4) * scale * (0.58 + pressure * 0.84);
+            context.beginPath();
+            context.moveTo(previous.x, previous.y);
+            context.lineTo(point.x, point.y);
+            context.stroke();
+          }
+        } else {
+          const first = pointOnPage(points[0]);
+          context.lineWidth = (stroke.baseWidth || 24) * scale;
+          context.beginPath();
+          context.moveTo(first.x, first.y);
+          for (let index = 1; index < points.length; index += 1) {
+            const point = pointOnPage(points[index]);
+            context.lineTo(point.x, point.y);
+          }
+          context.stroke();
+        }
+        context.restore();
+      }
+
+      function removePrintInkLayers() {
+        document.querySelectorAll('.print-ink-layer').forEach((layer) => layer.remove());
+        printPrepared = false;
+      }
+
+      function preparePrintView() {
+        if (printPrepared) return Array.from(document.querySelectorAll('.print-ink-layer'));
+        const images = [];
+
+        sections.forEach((section) => {
+          const sectionStrokes = inkStrokes.filter((stroke) => stroke.sectionId === section.id);
+          if (!sectionStrokes.length) return;
+          const rect = section.getBoundingClientRect();
+          const width = Math.max(1, Math.round(rect.width));
+          const height = Math.max(1, Math.round(rect.height));
+          const pixelBudgetScale = Math.sqrt(4000000 / (width * height));
+          const outputScale = Math.max(0.5, Math.min(1.25, pixelBudgetScale));
+          const printCanvas = document.createElement('canvas');
+          printCanvas.width = Math.max(1, Math.round(width * outputScale));
+          printCanvas.height = Math.max(1, Math.round(height * outputScale));
+          const printContext = printCanvas.getContext('2d');
+          printContext.setTransform(outputScale, 0, 0, outputScale, 0, 0);
+          sectionStrokes.forEach((stroke) => drawStrokeForPrint(printContext, stroke, width, height));
+          const image = document.createElement('img');
+          image.className = 'print-ink-layer';
+          image.alt = '';
+          image.setAttribute('aria-hidden', 'true');
+          image.src = printCanvas.toDataURL('image/png');
+          section.appendChild(image);
+          images.push(image);
+        });
+
+        printPrepared = true;
+        return images;
+      }
+
+      async function saveAsPdf() {
+        setInkMode('navigate');
+        let images = [];
+        try {
+          images = preparePrintView();
+          await Promise.all(images.map((image) => typeof image.decode === 'function' ? image.decode().catch(() => undefined) : Promise.resolve()));
+          const isIPad = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+          inkStatus.textContent = isIPad
+            ? 'Print preview opened · tap Share, then Save to Files.'
+            : 'Print dialog opened · choose Save as PDF, then choose the folder.';
+          window.print();
+        } catch (_) {
+          removePrintInkLayers();
+          inkStatus.textContent = 'PDF preparation failed. Save an annotated HTML copy instead.';
+        }
+      }
+
+      inkModeButtons.forEach((button) => button.addEventListener('click', () => setInkMode(button.dataset.inkMode)));
+      inkToolButtons.forEach((button) => button.addEventListener('click', () => {
+        inkTool = button.dataset.inkTool;
+        inkStatus.textContent = `${button.textContent.trim()} selected.`;
+        updateInkControls();
+      }));
+      inkColorButtons.forEach((button) => button.addEventListener('click', () => {
+        inkColor = button.dataset.inkColor;
+        inkStatus.textContent = `${button.getAttribute('aria-label')} selected.`;
+        updateInkControls();
+      }));
+      inkUndoButton.addEventListener('click', undoInk);
+      inkRedoButton.addEventListener('click', redoInk);
+      inkClearButton.addEventListener('click', clearCurrentSectionInk);
+      inkSaveButton.addEventListener('click', saveAnnotatedCopy);
+      inkSavePdfButton.addEventListener('click', saveAsPdf);
+      inkCanvas.addEventListener('pointerdown', beginInkStroke);
+      inkCanvas.addEventListener('pointermove', moveInkStroke);
+      inkCanvas.addEventListener('pointerup', finishInkStroke);
+      inkCanvas.addEventListener('pointercancel', finishInkStroke);
+      inkCanvas.addEventListener('contextmenu', (event) => event.preventDefault());
+
+      document.addEventListener('keydown', (event) => {
+        const target = event.target;
+        const isControl = target instanceof HTMLButtonElement || target instanceof HTMLAnchorElement || target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+        if (isControl) return;
+        if (event.key === 'Escape' && inkMode === 'write') {
+          event.preventDefault();
+          setInkMode('navigate');
+        } else if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'z') {
+          event.preventDefault();
+          if (event.shiftKey) redoInk(); else undoInk();
+        }
+      });
+
+      window.addEventListener('scroll', () => {
+        requestInkRender();
+        updateInkControls();
+      }, { passive: true });
+      window.addEventListener('resize', resizeInkCanvas);
+      window.addEventListener('beforeprint', preparePrintView);
+      window.addEventListener('afterprint', removePrintInkLayers);
+      if ('ResizeObserver' in window) new ResizeObserver(requestInkRender).observe(paper);
+
+      loadInk();
+      resizeInkCanvas();
+      setInkMode('navigate');
+
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
