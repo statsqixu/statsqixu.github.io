@@ -3,7 +3,6 @@ layout: about
 title: home
 permalink: /
 subtitle:
-hide_header: true
 
 profile: false
 
@@ -34,41 +33,19 @@ latest_posts:
     <a href="https://math.tongji.edu.cn">Tongji University</a>.
   </p>
 
-  <p>
-    I am recently interested in:
-  </p>
-
-  <ul class="interest-list">
-    <li>
-      How can we integrate heterogeneous datasets for prediction, estimation, and inference with statistical rigor?
-      [method/theory]
-      [
-      <a href="https://arxiv.org/abs/2503.09494" target="_blank" rel="noopener noreferrer">1</a>,
-      <a href="https://arxiv.org/abs/2509.24158" target="_blank" rel="noopener noreferrer">2</a>,
-      <a href="https://arxiv.org/abs/2602.04178" target="_blank" rel="noopener noreferrer">3</a>,
-      <a href="https://arxiv.org/abs/2505.24259" target="_blank" rel="noopener noreferrer">4</a>,
-      <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2025.2602522" target="_blank" rel="noopener noreferrer">5</a>,
-      <a href="https://arxiv.org/abs/2505.24281" target="_blank" rel="noopener noreferrer">6</a>,
-      <a href="https://arxiv.org/pdf/2505.06452" target="_blank" rel="noopener noreferrer">7</a>
-      ]
-    </li>
-    <li>
-      How can we integrate predictive and generative AI models into statistical problems?
-      [method/theory]
-      [<a href="https://arxiv.org/abs/2509.24158" target="_blank" rel="noopener noreferrer">1</a>]
-    </li>
-    <li>How will AI change the research pipeline and community? [application]</li>
-  </ul>
-
-  <p>
-    Email me at <code>qixu[at]umn.edu</code>. See my full publication list in
-    <a href="https://scholar.google.com/citations?user=iRt0ZAgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-      Google Scholar
-    </a>.
-  </p>
+  <section class="research-scope" aria-labelledby="research-scope-title">
+    <h2 id="research-scope-title">Research</h2>
+    <ul class="research-focus-list">
+      <li><strong>AI for Stat:</strong> foundation models for statistical problems</li>
+      <li><strong>Stat for AI:</strong> multi-modal AI and automated data analysis in the agentic loop</li>
+      <li><strong>Applications:</strong> genomics, EHR</li>
+    </ul>
+    <p class="section-link"><a href="{{ '/research/' | relative_url }}">More about my research <span aria-hidden="true">→</span></a></p>
+  </section>
 
   <section class="updates-section">
     <h2>Recent Updates</h2>
     {% include news.liquid limit=true %}
   </section>
+
 </div>

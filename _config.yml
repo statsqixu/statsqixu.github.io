@@ -9,7 +9,7 @@ last_name: Xu
 contact_note: >
   Email is the best way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Qi Xu, postdoctoral researcher in statistics and machine learning.
+  Personal website of Qi Xu, assistant professor of statistics at the University of Minnesota.
 footer_text:
 keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -43,7 +43,7 @@ repo_trophies:
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
+navbar_fixed: false
 footer_fixed: false
 search_enabled: false
 socials_in_search: false
@@ -189,8 +189,6 @@ exclude:
   - _pages/personal.md
   - _pages/projects.md
   - _pages/repositories.md
-  - _pages/research.md
-  - _pages/teaching.md
   - _pages/cv.md
   - _pages/profiles.md
   - _pages/dropdown.md

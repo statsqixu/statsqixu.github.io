@@ -1,16 +1,14 @@
+- title: Home
+  url: /
+
 - title: Research
-  url: /#research
+  url: /research/
 
-- title: Background
-  url: /#background
+- title: Teaching
+  url: /teaching/
 
-- title: CV
-  url: /CV.pdf
-  new_tab: true
+- title: Awards & Grants
+  url: /awards/
 
-- title: Scholar
-  url: https://scholar.google.com/citations?user=iRt0ZAgAAAAJ&hl=en
-  new_tab: true
-
-- title: Email
-  url: mailto:qixu@andrew.cmu.edu
+- title: Service
+  url: /service/
