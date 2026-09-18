@@ -43,6 +43,7 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
+      # Include the Sass entrypoint and partials that generate main.css.
       digest = Digest::MD5.new
       (Dir['_sass/**/*.scss'].sort + ['assets/css/main.scss']).each do |path|
         digest.update(File.binread(path))
