@@ -105,7 +105,12 @@
             key,
             decodeBase64(payload)
           );
-          const html = new TextDecoder().decode(plaintext);
+          // Add the live activity after unlocking, keeping the encrypted lecture intact.
+          const activityLink = "<p class=\"birthday-activity-link\" style=\"margin:18px 0;font-size:1rem\"><a href=\"https://qi-xu.com/assets/lectures/stat5101-fall2026/lec5/birthday/\" target=\"_blank\" rel=\"noopener\" style=\"display:inline-block;padding:12px 18px;background:#7a0019;color:#fff;border-radius:10px;text-decoration:none;font-weight:700\">Join our live birthday experiment \u2197</a></p>";
+          const html = new TextDecoder().decode(plaintext).replace(
+            /(<section\b[^>]*id="birthday"[^>]*>[\s\S]*?<\/h[23]>)/,
+            match => match + activityLink
+          );
           passwordInput.value = '';
           document.open();
           document.write(html);
