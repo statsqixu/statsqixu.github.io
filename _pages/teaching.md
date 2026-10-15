@@ -9,7 +9,7 @@ title: Teaching
     <h2>University of Minnesota (Fall 2026)</h2>
     <ul>
       <li>STAT 3301: Regression and Statistical Computing</li>
-      <li><a href="{{ '/teaching/stat5101/' | relative_url }}">STAT 5101: Theory of Statistics I</a></li>
+      <li>STAT 5101: Theory of Statistics I</li>
     </ul>
   </section>
 
