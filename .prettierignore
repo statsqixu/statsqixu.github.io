@@ -12,3 +12,4 @@ _sass/tabler-icons/*.scss
 _scripts/*
 # Generated encrypted presentation
 private/utsa-2026/index.html
+private/umn-biostat-2026/index.html
