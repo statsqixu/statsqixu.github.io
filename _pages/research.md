@@ -5,6 +5,7 @@ permalink: /research/
 ---
 
 <div class="site-page">
+  {% comment %}
   <section class="content-section">
     <h2>Recent research interests</h2>
     <div class="research-interest-list">
@@ -24,6 +25,7 @@ permalink: /research/
       </details>
     </div>
   </section>
+  {% endcomment %}
 
   <section class="content-section">
     <h2>Selected publications in scientific applications</h2>

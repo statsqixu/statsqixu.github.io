@@ -33,6 +33,7 @@ latest_posts:
     <a href="https://math.tongji.edu.cn">Tongji University</a>.
   </p>
 
+  {% comment %}
   <section class="research-scope" aria-labelledby="research-scope-title">
     <h2 id="research-scope-title">Research</h2>
     <ul class="research-focus-list">
@@ -42,6 +43,7 @@ latest_posts:
     </ul>
     <p class="section-link"><a href="{{ '/research/' | relative_url }}">More about my research <span aria-hidden="true">→</span></a></p>
   </section>
+  {% endcomment %}
 
   <section class="updates-section">
     <h2>Recent Updates</h2>
